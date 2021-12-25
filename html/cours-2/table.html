@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableaux</title>
+    <style>
+        table,
+        table * {
+            outline: black 1px solid;
+        }
+
+        tr,
+        td[rowspan] {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tableau simple -->
+    <table>
+        <!-- Légende du tabeau -->
+        <caption>Liste des membres</caption>
+        <!-- Entête du tableau -->
+        <thead>
+            <!-- Ligne du tableau -->
+            <tr>
+                <!-- Cellules d'entête du tableau -->
+                <th>#id</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Date de naissance</th>
+            </tr>
+        </thead>
+
+        <!-- Corps du tableau -->
+        <tbody>
+            <tr>
+                <!-- Cellules de donnée du tableau -->
+                <th>2</th>
+                <td>Sacha</td>
+                <td>Pignot</td>
+                <td>03/02/1993</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Sebastien</td>
+                <td>Philodendron</td>
+                <td>xx/xx/xxxx</td>
+            </tr>
+            <tr>
+                <th>4</td>
+                <td>Élaine</td>
+                <td>Philodendron</td>
+                <td>xx/xx/xxxx</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td>Denis</td>
+                <td>Nanabhozo</td>
+                <td>xx/xx/xxxx</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <!-- Tableau avec colspan et rowspan -->
+    <table>
+        <thead>
+            <tr>
+                <th> - </th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="4"> - </td>
+                <td colspan="2">Sacha Pignot</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td colspan="2">Sebastien Philodendron</td>
+                <td>??</td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td colspan="2">Élaine Philodendron</td>
+                <td>??</td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td colspan="2">Denis Nanabhozo</td>
+                <td>??</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
