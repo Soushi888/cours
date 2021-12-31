@@ -8,13 +8,11 @@
     
     <!-- Style CSS pour mettre en évidence les tableaux -->
     <style>
-        table,
-        table * {
+        table, table * {
             outline: black 1px solid;
         }
 
-        tr,
-        td[rowspan] {
+        tr {
             outline: none;
         }
     </style>
@@ -83,26 +81,30 @@
 
         <tbody>
             <tr>
+                <!-- L'attribut "rowspan" permet de fusioner plusieurs cellules d'une même colone -->
                 <td rowspan="4"> - </td>
+                <!-- L'attribut "colspan" permet de fusioner plusieurs cellules d'une même ligne -->
                 <td colspan="2">Sacha Pignot</td>
                 <td>28</td>
             </tr>
             <tr>
-                <!-- <td></td> -->
                 <td colspan="2">Sebastien Philodendron</td>
                 <td>??</td>
             </tr>
             <tr>
-                <!-- <td></td> -->
                 <td colspan="2">Élaine Philodendron</td>
                 <td>??</td>
             </tr>
             <tr>
-                <!-- <td></td> -->
                 <td colspan="2">Denis Nanabhozo</td>
                 <td>??</td>
             </tr>
         </tbody>
+
+        <!-- Bas du tableau -->
+        <tfoot>
+            <th colspan="4">Footer</th>
+        </tfoot>
     </table>
 </body>
 

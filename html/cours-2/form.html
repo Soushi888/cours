@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaires</title>
+
+    <!-- Style CSS pour placer le contenu du formulaire -->
+    <style>
+        form {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,77 +25,107 @@
         <!-- Encadré dans un formulaire -->
         <fieldset>
             <!-- Legend de l'encadré -->
-            <legend>Text</legend>
+            <legend>Text, email, url et mot de passe</legend>
+
             <!-- Label permet de selectionner un input en cliquant dessus -->
-            <label>Nom :
+            <label>Text :
                 <!-- Input text : text normal -->
                 <!-- name: referrent de la donnée entrée -->
                 <!-- placeholder : text par default inselectionable -->
-                <input type="text" name="nom" placeholder="nom">
+                <input type="text" name="text" placeholder="text">
+            </label><br>
+            <!-- readonly : rend impossible d'écrire dans le champs -->
+            <!-- value : valeure par défaut du champs -->
+            <label>Read Only :
+                <input type="text" readonly value="read only">
+            </label><br>
+            <!-- Type url: exige une url valide -->
+            <label>URL :
+                <input type="url" name="url" placeholder="url">
             </label>
-            <label>Prénom :
-                <input type="text" name="prenom" placeholder="prénom">
-            </label>
-        </fieldset>
-
-        <br>
-        <fieldset>
-            <legend>Email et mots de passe</legend>
+            <br><br>
             <label>Email :
-                <!-- Type email : requiere une adresse email valide -->
+                <!-- Type email : exige une adresse email valide -->
                 <!-- required = cahmps obligatoire -->
                 <input type="email" name="email" placeholder="email" required>
-            </label>
-            <label>Mot de passe :
-                <input type="password" name="password" placeholder="password">
-            </label>
-        </fieldset>
-
-        <br>
-        <fieldset>
-            <legend>Nombre et Date</legend>
-            <label>Age :
-                <!-- Type number : seulement nombres entier ou flottant -->
-                <!-- min et max : valeures minimales ou maximales -->
-                <!-- step : interval entre les nombres possibles -->
-                <!-- value : valeure par defaut du champs -->
-                <input type="number" name="age" min="10" max="100" step="5" value="10">
-            </label>
-            <label>Date de naissance :
-                <!-- Type date : date sous le format jj/mm/aaaa -->
-                <input type="date" name="birthday">
             </label><br>
-            <label>Heure de naissance :
-                <!-- Type datetime-local : date et heure locale sous le format jj/mm/aaaa hh:mm   -->
-                <input type="datetime-local" name="houre">
-            </label>
-            <label>Mois de naissance :
-                <!-- Type month : mois et année -->
-                <input type="month" name="month">
+            <!-- Type password : masque les caractères du champs -->
+            <!-- minlength et maxlength : nombres de caractàres minimums et maximums requis -->
+            <label>Mot de passe :
+                <input type="password" name="password" placeholder="password" minlength="3" maxlength="20">
             </label>
         </fieldset>
 
-        <br>
+        <fieldset>
+            <legend>Nombres et Dates</legend>
+
+            <fieldset>
+                <legend>Nombres</legend>
+
+                <label>Age :
+                    <!-- Type number : seulement nombres entier ou flottant -->
+                    <!-- min et max : valeures minimales ou maximales -->
+                    <!-- step : interval entre les nombres possibles -->
+                    <!-- value : valeure par defaut du champs -->
+                    <input type="number" name="age" min="10" max="100" step="5" value="10">
+                </label><br>
+                <!-- Type range : permet de choisir un valeur numérique comprise entre deux bornes -->
+                <label>Range :
+                    <input type="range" min="20" max="50" step="10">
+                </label>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Dates</legend>
+
+                <label>Date :
+                    <!-- Type date : date sous le format jj/mm/aaaa -->
+                    <input type="date" name="birthday">
+                </label><br>
+                <label>Date et heure :
+                    <!-- Type datetime-local : date et heure locale sous le format jj/mm/aaaa hh:mm   -->
+                    <input type="datetime-local" name="houre">
+                </label><br>
+                <label>Heures et minutes :
+                    <!-- Type time : heures et minutes -->
+                    <input type="time" name="time">
+                </label><br>
+                <label>Mois et années :
+                    <!-- Type month : mois et année -->
+                    <input type="month" name="month">
+                </label><br>
+                <label>Semaine :
+                    <!-- Type week : semaine -->
+                    <input type="week" name="week">
+                </label>
+            </fieldset>
+        </fieldset>
+
         <fieldset>
             <legend>Select et checkbox et radio</legend>
+
             <fieldset>
                 <legend>Select</legend>
+
                 <label>Cours :
                     <!-- Select : Liste déroulée d'options à choisir -->
+                    <!-- L'attribut "selected" permet de sélectioner par défaut -->
                     <select name="cours">
                         <option value="html">HTML</option>
                         <option value="css">CSS</option>
-                        <option value="js">JavaScript</option>
+                        <option value="js" selected>JavaScript</option>
                     </select>
                 </label>
             </fieldset>
             <br>
             <fieldset>
                 <legend>Checkbox</legend>
+
                 <p>1 ou plusieurs : </p>
                 <!-- Type checkbox : cases à cocher pour choix multiple -->
                 <!-- L'attribut "name" permet d'associer les différents choix ensemble -->
                 <!-- L'attribut "value" permet d'associer un valeure à l'élément coché  -->
+                <!-- L'attribut "checked" permet de cocher par défaut -->
                 <label><input type="checkbox" name="checkbox" value="choix 1"> Choix 1</label><br>
                 <label><input type="checkbox" name="checkbox" value="choix 2" checked> Choix 2</label><br>
                 <label><input type="checkbox" name="checkbox" value="choix 3"> Choix 3</label>
@@ -93,6 +133,7 @@
             <br>
             <fieldset>
                 <legend>Radio</legend>
+
                 <p>Seulement 1 : </p>
                 <!-- Type radio : Permet de ne faire qu'un choix parmi une liste de choix -->
                 <label><input type="radio" name="radio" value="choix 1"> Choix 1</label><br>
@@ -103,26 +144,36 @@
 
         <fieldset>
             <legend>Couleur, fichier et textarea</legend>
+
             <!-- Type color : permet de choisir un couleure -->
             <label>Couleur :
                 <input type="color" name="color">
             </label><br>
-            <!-- Type file : Permet de lectionner un fichier -->
+            <!-- Type file : Permet de selectionner un fichier -->
             <label>Fichier :
                 <input type="file" name="file">
             </label><br>
             <!-- Textarea : Zone de texte large -->
             <!-- cols et rows : permettent de définir la hauteur et la largeur de la zone de texte -->
-            <label>Message :
-                <textarea name="message" cols="90" rows="10"></textarea><br>
+            <label>Message : <br>
+                <textarea name="message" cols="50" rows="10"></textarea><br>
             </label>
+
+            <!-- disabled : champs désactivé -->
+            <input type="range" disabled>
         </fieldset>
 
-        <br>
-        <!-- Envoi le formulaire -->
-        <button type="submit">Envoyer !</button>
-        <!-- Réinitialise le formulaire -->
-        <button type="reset">Reset</button>
+        <!-- Type hidden : invisible pour l'utilisateur. 
+            Permet de transferrer des valeurs dans le formulaire sans interaction avec l'utilisateur. -->
+        <input type="hidden" name="id" value="123">
+
+        <div>
+            <!-- Envoi le formulaire -->
+            <button type="submit">Envoyer !</button>
+            <br>
+            <!-- Réinitialise le formulaire -->
+            <button type="reset">Reset</button>
+        </div>
     </form>
 </body>
 
