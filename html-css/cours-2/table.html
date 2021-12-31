@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableaux</title>
-    
+
     <!-- Style CSS pour mettre en évidence les tableaux -->
     <style>
         table, table * {
@@ -19,93 +19,96 @@
 </head>
 
 <body>
-    <h1>Tableaux</h1>
-    <!-- Tableau simple -->
-    <table>
-        <!-- Légende du tabeau -->
-        <caption>Liste des membres</caption>
-        <!-- Entête du tableau -->
-        <thead>
-            <!-- Ligne du tableau -->
-            <tr>
-                <!-- Cellules d'entête du tableau -->
-                <th>#id</th>
-                <th>Prénom</th>
-                <th>Nom</th>
-                <th>Date de naissance</th>
-            </tr>
-        </thead>
+<h1>Tableaux</h1>
+<!-- Tableau simple -->
+<table>
+    <!-- Légende du tabeau -->
+    <caption>Liste des membres</caption>
+    <!-- Entête du tableau -->
+    <thead>
+    <!-- Ligne du tableau -->
+    <tr>
+        <!-- Cellules d'entête du tableau -->
+        <th>#id</th>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Date de naissance</th>
+    </tr>
+    </thead>
 
-        <!-- Corps du tableau -->
-        <tbody>
-            <tr>
-                <!-- Cellules de donnée du tableau -->
-                <th>2</th>
-                <td>Sacha</td>
-                <td>Pignot</td>
-                <td>03/02/1993</td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>Sebastien</td>
-                <td>Philodendron</td>
-                <td>xx/xx/xxxx</td>
-            </tr>
-            <tr>
-                <th>4</td>
-                <td>Élaine</td>
-                <td>Philodendron</td>
-                <td>xx/xx/xxxx</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td>Denis</td>
-                <td>Nanabhozo</td>
-                <td>xx/xx/xxxx</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Corps du tableau -->
+    <tbody>
+    <tr>
+        <!-- Cellules de donnée du tableau -->
+        <th>2</th>
+        <td>Sacha</td>
+        <td>Pignot</td>
+        <td>03/02/1993</td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td>Sebastien</td>
+        <td>Philodendron</td>
+        <td>xx/xx/xxxx</td>
+    </tr>
+    <tr>
+        <th>4
+        </td>
+        <td>Élaine</td>
+        <td>Philodendron</td>
+        <td>xx/xx/xxxx</td>
+    </tr>
+    <tr>
+        <th>5</th>
+        <td>Denis</td>
+        <td>Nanabhozo</td>
+        <td>xx/xx/xxxx</td>
+    </tr>
+    </tbody>
+</table>
 
-    <br>
+<br>
 
-    <!-- Tableau avec colspan et rowspan -->
-    <table>
-        <thead>
-            <tr>
-                <th> - </th>
-                <th>Prénom</th>
-                <th>Nom</th>
-                <th>Age</th>
-            </tr>
-        </thead>
+<!-- Tableau avec colspan et rowspan -->
+<table>
+    <thead>
+    <tr>
+        <th> -</th>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Age</th>
+    </tr>
+    </thead>
 
-        <tbody>
-            <tr>
-                <!-- L'attribut "rowspan" permet de fusioner plusieurs cellules d'une même colone -->
-                <td rowspan="4"> - </td>
-                <!-- L'attribut "colspan" permet de fusioner plusieurs cellules d'une même ligne -->
-                <td colspan="2">Sacha Pignot</td>
-                <td>28</td>
-            </tr>
-            <tr>
-                <td colspan="2">Sebastien Philodendron</td>
-                <td>??</td>
-            </tr>
-            <tr>
-                <td colspan="2">Élaine Philodendron</td>
-                <td>??</td>
-            </tr>
-            <tr>
-                <td colspan="2">Denis Nanabhozo</td>
-                <td>??</td>
-            </tr>
-        </tbody>
+    <tbody>
+    <tr>
+        <!-- L'attribut "rowspan" permet de fusioner plusieurs cellules d'une même colone -->
+        <td rowspan="4"> -</td>
+        <!-- L'attribut "colspan" permet de fusioner plusieurs cellules d'une même ligne -->
+        <td colspan="2">Sacha Pignot</td>
+        <td>28</td>
+    </tr>
+    <tr>
+        <td colspan="2">Sebastien Philodendron</td>
+        <td>??</td>
+    </tr>
+    <tr>
+        <td colspan="2">Élaine Philodendron</td>
+        <td>??</td>
+    </tr>
+    <tr>
+        <td colspan="2">Denis Nanabhozo</td>
+        <td>??</td>
+    </tr>
+    </tbody>
 
-        <!-- Bas du tableau -->
-        <tfoot>
-            <th colspan="4">Footer</th>
-        </tfoot>
-    </table>
+    <!-- Bas du tableau -->
+    <tfoot>
+    <tr>
+        <th colspan="4">Footer</th>
+    </tr>
+    </tfoot>
+</table>
 </body>
 
 </html>

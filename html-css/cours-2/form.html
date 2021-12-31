@@ -18,163 +18,164 @@
 </head>
 
 <body>
-    <h1>Formulaires</h1>
+<h1>Formulaires</h1>
 
-    <!-- Balise de formulaire -->
-    <form>
-        <!-- Encadré dans un formulaire -->
+<!-- Balise de formulaire -->
+<form>
+    <!-- Encadré dans un formulaire -->
+    <fieldset>
+        <!-- Legend de l'encadré -->
+        <legend>Text, email, url et mot de passe</legend>
+
+        <!-- Label permet de selectionner un champs en cliquant dessus -->
+        <label>Text :
+            <!-- Input text : text normal
+                L'attribut "name" est la référence pour la donnée entrée
+                L'attribut "placeholder" est text par default inselectionable
+                Les attributs "minlength" et "maxlength" sont le nombres de caractàres minimums et maximums requis -->
+            <input type="text" name="text" placeholder="text" minlength="3" maxlength="20">
+        </label><br>
+        <!-- L'attribut "readonly" rend impossible d'écrire dans le champs
+            L'attribut "value" est la valeure par défaut du champs -->
+        <label>Read Only :
+            <input type="text" readonly value="read only">
+        </label><br>
+        <!-- Type url: exige une url valide -->
+        <label>URL :
+            <input type="url" name="url" placeholder="url">
+        </label>
+        <br><br>
+        <label>Email :
+            <!-- Type email : exige une adresse email valide
+                L'attribut "required" rend le champs obligatoire -->
+            <input type="email" name="email" placeholder="email" required>
+        </label><br>
+        <!-- Type password : masque les caractères du champs -->
+
+        <label>Mot de passe :
+            <input type="password" name="password" placeholder="password">
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Nombres et Dates</legend>
+
         <fieldset>
-            <!-- Legend de l'encadré -->
-            <legend>Text, email, url et mot de passe</legend>
+            <legend>Nombres</legend>
 
-            <!-- Label permet de selectionner un champs en cliquant dessus -->
-            <label>Text :
-                <!-- Input text : text normal 
-                    L'attribut "name" est la référence pour la donnée entrée 
-                    L'attribut "placeholder" est text par default inselectionable
-                    Les attributs "minlength" et "maxlength" sont le nombres de caractàres minimums et maximums requis -->
-                <input type="text" name="text" placeholder="text" minlength="3" maxlength="20">
+            <label>Age :
+                <!-- Type number : seulement nombres entier ou flottant
+                    Les attributs "min" et "max" sont les valeures minimales ou maximales
+                    L'attribut "step" est l'interval entre les nombres possibles -->
+                <input type="number" name="age" min="10" max="100" step="5" value="10">
             </label><br>
-            <!-- L'attribut "readonly" rend impossible d'écrire dans le champs 
-                L'attribut "value" est la valeure par défaut du champs -->
-            <label>Read Only :
-                <input type="text" readonly value="read only">
-            </label><br>
-            <!-- Type url: exige une url valide -->
-            <label>URL :
-                <input type="url" name="url" placeholder="url">
+            <!-- Type range : permet de choisir un valeur numérique comprise entre deux bornes -->
+            <label>Range :
+                <input type="range" min="20" max="50" step="10">
             </label>
-            <br><br>
-            <label>Email :
-                <!-- Type email : exige une adresse email valide 
-                    L'attribut "required" rend le champs obligatoire -->
-                <input type="email" name="email" placeholder="email" required>
-            </label><br>
-            <!-- Type password : masque les caractères du champs -->
+        </fieldset>
+        <br>
 
-            <label>Mot de passe :
-                <input type="password" name="password" placeholder="password">
+        <fieldset>
+            <legend>Dates</legend>
+
+            <label>Date :
+                <!-- Type date : date sous le format jj/mm/aaaa -->
+                <input type="date" name="birthday">
+            </label><br>
+            <label>Date et heure :
+                <!-- Type datetime-local : date et heure locale sous le format jj/mm/aaaa hh:mm   -->
+                <input type="datetime-local" name="houre">
+            </label><br>
+            <label>Heures et minutes :
+                <!-- Type time : heures et minutes -->
+                <input type="time" name="time">
+            </label><br>
+            <label>Mois et années :
+                <!-- Type month : mois et année -->
+                <input type="month" name="month">
+            </label><br>
+            <label>Semaine :
+                <!-- Type week : semaine -->
+                <input type="week" name="week">
             </label>
         </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Select et checkbox et radio</legend>
 
         <fieldset>
-            <legend>Nombres et Dates</legend>
+            <legend>Select</legend>
 
-            <fieldset>
-                <legend>Nombres</legend>
-
-                <label>Age :
-                    <!-- Type number : seulement nombres entier ou flottant 
-                        Les attributs "min" et "max" sont les valeures minimales ou maximales 
-                        L'attribut "step" est l'interval entre les nombres possibles -->
-                    <input type="number" name="age" min="10" max="100" step="5" value="10">
-                </label><br>
-                <!-- Type range : permet de choisir un valeur numérique comprise entre deux bornes -->
-                <label>Range :
-                    <input type="range" min="20" max="50" step="10">
-                </label>
-            </fieldset><br>
-
-            <fieldset>
-                <legend>Dates</legend>
-
-                <label>Date :
-                    <!-- Type date : date sous le format jj/mm/aaaa -->
-                    <input type="date" name="birthday">
-                </label><br>
-                <label>Date et heure :
-                    <!-- Type datetime-local : date et heure locale sous le format jj/mm/aaaa hh:mm   -->
-                    <input type="datetime-local" name="houre">
-                </label><br>
-                <label>Heures et minutes :
-                    <!-- Type time : heures et minutes -->
-                    <input type="time" name="time">
-                </label><br>
-                <label>Mois et années :
-                    <!-- Type month : mois et année -->
-                    <input type="month" name="month">
-                </label><br>
-                <label>Semaine :
-                    <!-- Type week : semaine -->
-                    <input type="week" name="week">
-                </label>
-            </fieldset>
-        </fieldset>
-
-        <fieldset>
-            <legend>Select et checkbox et radio</legend>
-
-            <fieldset>
-                <legend>Select</legend>
-
-                <label>Cours :
-                    <!-- Select : Liste déroulante d'options à choisir 
-                        L'attribut "selected" permet de sélectioner par défaut -->
-                    <select name="cours">
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="js" selected>JavaScript</option>
-                    </select>
-                </label>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>Checkbox</legend>
-
-                <p>1 ou plusieurs : </p>
-                <!-- Type checkbox : cases à cocher pour choix multiples
-                    L'attribut "name" permet d'associer les différents choix ensembles
-                    L'attribut "value" permet d'associer une valeure à l'élément coché 
-                    L'attribut "checked" permet de cocher par défaut -->
-                <label><input type="checkbox" name="checkbox" value="choix 1"> Choix 1</label><br>
-                <label><input type="checkbox" name="checkbox" value="choix 2" checked> Choix 2</label><br>
-                <label><input type="checkbox" name="checkbox" value="choix 3"> Choix 3</label>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>Radio</legend>
-
-                <p>Seulement 1 : </p>
-                <!-- Type radio : Permet de ne faire qu'un choix parmi une liste de choix -->
-                <label><input type="radio" name="radio" value="choix 1"> Choix 1</label><br>
-                <label><input type="radio" name="radio" value="choix 2"> Choix 2</label><br>
-                <label><input type="radio" name="radio" value="choix 3" checked> Choix 3</label>
-            </fieldset>
-        </fieldset>
-
-        <fieldset>
-            <legend>Couleur, fichier et textarea</legend>
-
-            <!-- Type color : permet de choisir un couleure -->
-            <label>Couleur :
-                <input type="color" name="color">
-            </label><br>
-            <!-- Type file : Permet de selectionner un fichier -->
-            <label>Fichier :
-                <input type="file" name="file">
-            </label><br>
-            <!-- Textarea : Zone de texte élargie 
-                Les attributs "cols" et "rows"  permettent de définir la hauteur et la largeur de la zone de texte -->
-            <label>Message : <br>
-                <textarea name="message" cols="50" rows="10"></textarea><br>
+            <label>Cours :
+                <!-- Select : Liste déroulante d'options à choisir
+                    L'attribut "selected" permet de sélectioner par défaut -->
+                <select name="cours">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js" selected>JavaScript</option>
+                </select>
             </label>
-
-            <!-- disabled : champs désactivé -->
-            <input type="range" disabled>
         </fieldset>
+        <br>
+        <fieldset>
+            <legend>Checkbox</legend>
 
-        <!-- Type hidden : invisible pour l'utilisateur. 
-            Permet de transferrer des valeurs dans le formulaire sans interaction avec l'utilisateur. -->
-        <input type="hidden" name="id" value="123">
+            <p>1 ou plusieurs : </p>
+            <!-- Type checkbox : cases à cocher pour choix multiples
+                L'attribut "name" permet d'associer les différents choix ensembles
+                L'attribut "value" permet d'associer une valeure à l'élément coché
+                L'attribut "checked" permet de cocher par défaut -->
+            <label><input type="checkbox" name="checkbox" value="choix 1"> Choix 1</label><br>
+            <label><input type="checkbox" name="checkbox" value="choix 2" checked> Choix 2</label><br>
+            <label><input type="checkbox" name="checkbox" value="choix 3"> Choix 3</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Radio</legend>
 
-        <div>
-            <!-- Envoi le formulaire -->
-            <button type="submit">Envoyer !</button>
-            <br>
-            <!-- Réinitialise le formulaire -->
-            <button type="reset">Reset</button>
-        </div>
-    </form>
+            <p>Seulement 1 : </p>
+            <!-- Type radio : Permet de ne faire qu'un choix parmi une liste de choix -->
+            <label><input type="radio" name="radio" value="choix 1"> Choix 1</label><br>
+            <label><input type="radio" name="radio" value="choix 2"> Choix 2</label><br>
+            <label><input type="radio" name="radio" value="choix 3" checked> Choix 3</label>
+        </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Couleur, fichier et textarea</legend>
+
+        <!-- Type color : permet de choisir un couleure -->
+        <label>Couleur :
+            <input type="color" name="color">
+        </label><br>
+        <!-- Type file : Permet de selectionner un fichier -->
+        <label>Fichier :
+            <input type="file" name="file">
+        </label><br>
+        <!-- Textarea : Zone de texte élargie
+            Les attributs "cols" et "rows"  permettent de définir la hauteur et la largeur de la zone de texte -->
+        <label>Message : <br>
+            <textarea name="message" cols="50" rows="10"></textarea><br>
+        </label>
+
+        <!-- disabled : champs désactivé -->
+        <input type="range" disabled>
+    </fieldset>
+
+    <!-- Type hidden : invisible pour l'utilisateur.
+        Permet de transférer des valeurs dans le formulaire sans interaction avec l'utilisateur. -->
+    <input type="hidden" name="id" value="123">
+
+    <div>
+        <!-- Envoi le formulaire -->
+        <button type="submit">Envoyer !</button>
+        <br>
+        <!-- Réinitialise le formulaire -->
+        <button type="reset">Reset</button>
+    </div>
+</form>
 </body>
 
 </html>
