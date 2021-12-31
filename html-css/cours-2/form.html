@@ -27,15 +27,16 @@
             <!-- Legend de l'encadré -->
             <legend>Text, email, url et mot de passe</legend>
 
-            <!-- Label permet de selectionner un input en cliquant dessus -->
+            <!-- Label permet de selectionner un champs en cliquant dessus -->
             <label>Text :
-                <!-- Input text : text normal -->
-                <!-- name: referrent de la donnée entrée -->
-                <!-- placeholder : text par default inselectionable -->
-                <input type="text" name="text" placeholder="text">
+                <!-- Input text : text normal 
+                    L'attribut "name" est la référence pour la donnée entrée 
+                    L'attribut "placeholder" est text par default inselectionable
+                    Les attributs "minlength" et "maxlength" sont le nombres de caractàres minimums et maximums requis -->
+                <input type="text" name="text" placeholder="text" minlength="3" maxlength="20">
             </label><br>
-            <!-- readonly : rend impossible d'écrire dans le champs -->
-            <!-- value : valeure par défaut du champs -->
+            <!-- L'attribut "readonly" rend impossible d'écrire dans le champs 
+                L'attribut "value" est la valeure par défaut du champs -->
             <label>Read Only :
                 <input type="text" readonly value="read only">
             </label><br>
@@ -45,14 +46,14 @@
             </label>
             <br><br>
             <label>Email :
-                <!-- Type email : exige une adresse email valide -->
-                <!-- required = cahmps obligatoire -->
+                <!-- Type email : exige une adresse email valide 
+                    L'attribut "required" rend le champs obligatoire -->
                 <input type="email" name="email" placeholder="email" required>
             </label><br>
             <!-- Type password : masque les caractères du champs -->
-            <!-- minlength et maxlength : nombres de caractàres minimums et maximums requis -->
+
             <label>Mot de passe :
-                <input type="password" name="password" placeholder="password" minlength="3" maxlength="20">
+                <input type="password" name="password" placeholder="password">
             </label>
         </fieldset>
 
@@ -63,10 +64,9 @@
                 <legend>Nombres</legend>
 
                 <label>Age :
-                    <!-- Type number : seulement nombres entier ou flottant -->
-                    <!-- min et max : valeures minimales ou maximales -->
-                    <!-- step : interval entre les nombres possibles -->
-                    <!-- value : valeure par defaut du champs -->
+                    <!-- Type number : seulement nombres entier ou flottant 
+                        Les attributs "min" et "max" sont les valeures minimales ou maximales 
+                        L'attribut "step" est l'interval entre les nombres possibles -->
                     <input type="number" name="age" min="10" max="100" step="5" value="10">
                 </label><br>
                 <!-- Type range : permet de choisir un valeur numérique comprise entre deux bornes -->
@@ -108,8 +108,8 @@
                 <legend>Select</legend>
 
                 <label>Cours :
-                    <!-- Select : Liste déroulée d'options à choisir -->
-                    <!-- L'attribut "selected" permet de sélectioner par défaut -->
+                    <!-- Select : Liste déroulante d'options à choisir 
+                        L'attribut "selected" permet de sélectioner par défaut -->
                     <select name="cours">
                         <option value="html">HTML</option>
                         <option value="css">CSS</option>
@@ -122,10 +122,10 @@
                 <legend>Checkbox</legend>
 
                 <p>1 ou plusieurs : </p>
-                <!-- Type checkbox : cases à cocher pour choix multiple -->
-                <!-- L'attribut "name" permet d'associer les différents choix ensemble -->
-                <!-- L'attribut "value" permet d'associer un valeure à l'élément coché  -->
-                <!-- L'attribut "checked" permet de cocher par défaut -->
+                <!-- Type checkbox : cases à cocher pour choix multiples
+                    L'attribut "name" permet d'associer les différents choix ensembles
+                    L'attribut "value" permet d'associer une valeure à l'élément coché 
+                    L'attribut "checked" permet de cocher par défaut -->
                 <label><input type="checkbox" name="checkbox" value="choix 1"> Choix 1</label><br>
                 <label><input type="checkbox" name="checkbox" value="choix 2" checked> Choix 2</label><br>
                 <label><input type="checkbox" name="checkbox" value="choix 3"> Choix 3</label>
@@ -153,8 +153,8 @@
             <label>Fichier :
                 <input type="file" name="file">
             </label><br>
-            <!-- Textarea : Zone de texte large -->
-            <!-- cols et rows : permettent de définir la hauteur et la largeur de la zone de texte -->
+            <!-- Textarea : Zone de texte élargie 
+                Les attributs "cols" et "rows"  permettent de définir la hauteur et la largeur de la zone de texte -->
             <label>Message : <br>
                 <textarea name="message" cols="50" rows="10"></textarea><br>
             </label>
