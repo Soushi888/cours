@@ -1,0 +1,35 @@
+/* CSS selectors reference : https://www.w3schools.com/cssref/css_selectors.asp
+examples : https://www.w3schools.com/cssref/trysel.asp */
+
+/* utiliser un id comme sélecteur */
+#title {
+    /* font-size : taille du texte en piexels (px) ou autres */
+    font-size: 2em;
+}
+
+.boite-1 {
+    background-color: rgba(39, 39, 180);
+}
+
+/* selecteur > : sélectionne des éléments avec un parent spécifique */
+/* sélectione tout les <p> dont le parent a la classe "boite-1" */
+.boite-1>p {
+    /* font-wigth: épaisseur (graisse) du texte. */
+    font-weight: 600;
+}
+
+/* sélectione tout les éléments <p> qui descendent des éléments avec la classe "boite-1" */
+.boite-1 p {
+    color: rgb(209, 243, 14);
+}
+
+.boite-2 {
+    /* width : largeur */
+    width: 300px;
+    /* margin : taille des marges */
+    /* dans ce cas ci, vu qu'une largeur est spécifiée, "auto" centre l'élément */
+    margin: auto;
+    /* valeure rgba : le a signifie alpha, l'opacité. */
+    /* 0 = invisible, 1 = 100% opaque */
+    background-color: rgba(95, 160, 124, 0.705);
+}

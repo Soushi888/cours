@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+
+    <!-- Balise link avec l'attribut rel="stylesheet : permet de lier un fichier css au document -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Balise style : permet d'écrire du CSS dans l'entête d'unfichier html -->
+    <style>
+        /* utiliser un tag comme selecteur */
+        h1 {
+            /* color : couleur d'un text au format rgb, hsl ou hexadecimal */
+            color: hsl(0, 100%, 50%);
+        }
+
+        /* utiliser une classe comme selecteur */
+        .underline {
+            /* text-decoration : ligne décorative d'un texte */
+            /*      underline : ligne sous le texte */
+            /*      overline : ligne au dessus du texte */
+            /*      line-through : texte barré */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Balise div : balise générique de type block -->
+    <!-- L'attribut "style" permet d'indiquer directement le syle de l'élément -->
+    <div style="background-color: rgb(80, 192, 80);">
+        <h1 id="title">Hello World !</h1>
+        <!-- Balise span : balise générique de type inline -->
+        <p>Ce paragraphe contient un <span class="underline">span</span></p>
+    </div>
+
+    <div class="boite-1">
+        <h2>Boite 1</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto aliquid reprehenderit delectus quis debitis
+            magnam dolores inventore reiciendis libero pariatur dicta deleniti, consequatur et, quae vel sint distinctio
+            maiores? Nam!</p>
+        <div class="boite-2">
+            <h2>Boite 2</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto aliquid reprehenderit delectus quis
+                debitis
+                magnam dolores inventore reiciendis libero pariatur dicta deleniti, consequatur et, quae vel sint
+                distinctio
+                maiores? Nam!</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id dolore, eligendi aliquid architecto ex
+            quae aspernatur! Aliquam hic nihil vero eum. Earum dolore voluptatibus accusantium recusandae totam quisquam
+            explicabo?</p>
+    </div>
+</body>
+
+</html>
