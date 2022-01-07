@@ -13,7 +13,9 @@
         /* utiliser un tag comme selecteur */
         h1 {
             /* color : couleur d'un text au format rgb, hsl ou hexadecimal */
-            color: rgb(255, 0, 0);
+            /* valeure rgba : le a signifie alpha, l'opacité. */
+            /* 0 = invisible, 1 = 100% opaque */
+            color: rgba(45, 216, 150, 0.753);
         }
 
         /* utiliser une classe comme selecteur */
@@ -30,7 +32,7 @@
 <body>
     <!-- Balise div : balise générique de type block -->
     <!-- L'attribut "style" permet d'indiquer directement le syle de l'élément -->
-    <div style="background-color: rgb(80, 192, 80);">
+    <div style="color: rgb(141, 141, 253); font-size: 20px;">
         <!-- L'attribut "id" permet d'attribuer un identifiant unique à un élément -->
         <h1 id="title">Hello World !</h1>
         <!-- Balise span : balise générique de type inline -->
@@ -61,6 +63,15 @@
             <img src="/images/beardo.png" alt="Avatar de Sacha Pignot.">
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium alias dolores temporibus fugiat nisi animi rem molestiae voluptates earum ab, veritatis assumenda, impedit quisquam laboriosam? Voluptate aliquam suscipit esse consectetur?</p>
+    </div>
+
+    <div>
+        <div class="inline">sadasdasd</div>
+        <div class="inline">sadasdasd</div>
+        <br>
+        <span class="block">dsfsdfds</span>
+        <span class="block">dsfsdfds</span>
+        <span class="block">dsfsdfds</span>
     </div>
 </body>
 
