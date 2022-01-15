@@ -1,17 +1,24 @@
+/* Sélectione tout dans tout */
 * * {
+    /* box-sizing : spécifie le comportement des propriétés 'width' et 'height' */
     box-sizing: border-box;
 }
 
 body {
     /* background: rgba(0, 0, 0, 0.3) url("images/vallee.jpg"); */
     /* background-size: cover; */
+
+    /* url('') permet d'indiquer un chemin vers un asset */
     background: rgba(0, 0, 0, 0.3) url("images/mountains.jpg");
+    /* background-blend-mode : définit le mode de mélange de chaque couche d'arrière-plan */
     background-blend-mode: overlay;
+    /* background-attachment : indique si les images d'arrière-plan sont fixes par rapport à la fenêtre d'affichage ("fixed") ou défilent avec l'élément ("scroll") ou son contenu ("local"). */
     background-attachment: fixed;
 }
 
 .central-card {
     height: calc(100vh - 20px);
+    /* overflow-x : Spécifie le traitement du débordement dans la direction horizontale */
     overflow-x: hidden;
     width: 500px;
     margin: auto;
@@ -24,15 +31,18 @@ body {
 h1 {
     text-align: center;
     margin-top: 0 auto 20px;
+    /* text-transform : contrôle les effets de la capitalisation du texte d'un élément */
     text-transform: uppercase;
 }
 
+/* ::first-letter permet de cibler la première lettre de l'élément */
 h1::first-letter {
     color: red;
     font-size: 55px;
 }
 
 label {
+    /* inline-block permet de modififier le margin, padding, height et width  comme un block tout en gardant le fait de rester sur la même ligne comme inline */
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -48,9 +58,9 @@ textarea {
     height: 100px;
 }
 
+/* pseudo-élément :focus : état d'un élément quand il est sélectionné  */
 input:focus,
 textarea:focus {
-    border: black 1px solid;
     outline: none;
     background: #5681a5;
 }
@@ -59,6 +69,7 @@ textarea:focus {
     border: red solid 2px;
 }
 
+/* [attribut="valeur"] permet de ciblet les éléments qui ont l'attribut spécifié */
 button[type="submit"] {
     display: block;
     width: 75px;
@@ -66,27 +77,33 @@ button[type="submit"] {
     background-color: rgb(4, 179, 4);
     border: black 1px solid;
     border-radius: 5px;
+    /* xursor : permet de contrôler l'apparition du curseur dans un élément */
     cursor: pointer;
     font-weight: 600;
 }
 
+/* Le pseudo-sélecteur :hover est utilisé pour sélectionner des éléments lorsque vous les survolez avec la souris.  */
 button:hover {
     background-color: green;
 }
 
 .texts {
     padding: 5px 10px;
-    background: linear-gradient(180deg, rgba(255, 0, 85, 0.5) 0%, rgba(110, 0, 179, 0.5) 49%, hsla(24, 100%, 42%, 0.5) 87%);
+    /* La fonction linear-gradient() définit un gradient linéaire comme image de fond */
+    background: linear-gradient(180deg, rgba(255, 0, 85, 0.5) 0%, rgba(110, 0, 179, 0.5) 50%, hsla(24, 100%, 42%, 0.5) 100%);
 }
 
+/* le pseudo-élément :first-of-type permet de sélectioner le premier élément du type des éléments spécifiés */
 .texts>p:first-of-type {
     font-weight: 600;
 }
 
+/* le pseudo-élément :nth-of-type(n) permet de sélectioner l'élément numéro n  àa partir du premier du type des éléments spécifiés */
 .texts>p:nth-of-type(2) {
     text-decoration: underline;
 }
 
+/* le pseudo-élément :last-of-type permet de sélectioner le dernier élément du type des éléments spécifiés */
 .texts>p:last-of-type {
     font-size: 20px;
 }
