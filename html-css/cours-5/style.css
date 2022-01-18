@@ -31,6 +31,17 @@ nav .logo img {
     width: 80px;
 }
 
+nav .links {
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+nav .links a.active {
+    color: rgb(237 199 6);
+}
+
 nav .social img {
     width: 50px;
 }
