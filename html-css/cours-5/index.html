@@ -8,7 +8,10 @@
 </head>
 
 <body>
-    <nav>
+    <!-- <top-bar> est une balise HTML personalisée.
+        Toutes les balises non-existantes utilisées sont considéreés comme des balises parsonalisées.
+        Elles ont le comportement d'une balise <div> et sont naturellement reconnues pas le CSS. -->
+    <top-bar>
         <div class="logo">
             <a href="/"><img src="images/fuck-qr.png" alt="Fuck les codes QR"></a>
             <a href="/">
@@ -16,20 +19,33 @@
             </a>
         </div>
 
-        <div class="links">
-            <a href="/" class="active">Accueil</a>
+        <nav>
+            <a href="#floats" class="active">Accueil</a>
             <a href="/about.html">À propos</a>
             <a href="/contact.html">Nous-joindre</a>
-        </div>
+        </nav>
 
         <div class="social">
             <a href="https://twitter.com" target="_blank"><img src="images/twitter-logo.png" alt=""></a>
             <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-logo.png" alt=""></a>
         </div>
-    </nav>
+    </top-bar>
 
     <main>
-        <h1>Hello World !</h1>
+        <header>
+            <!-- <card> aussi est une balise HTML personalisée. -->
+            <card>
+                <h2>Bienvenu !</h2>
+            </card>
+        </header>
+
+        <section id="floats">
+            <h2>Floats</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at quae eveniet omnis, ducimus ipsa praesentium velit, id nisi distinctio illum! Eos id quibusdam velit voluptatum sed labore sunt praesentium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at quae eveniet omnis, ducimus ipsa praesentium velit, id nisi distinctio illum! Eos id quibusdam velit voluptatum sed labore sunt praesentium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at quae eveniet omnis, ducimus ipsa praesentium velit, id nisi distinctio illum! Eos id quibusdam velit voluptatum sed labore sunt praesentium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate at quae eveniet omnis, ducimus ipsa praesentium velit, id nisi distinctio illum! Eos id quibusdam velit voluptatum sed labore sunt praesentium?</p>
+        </section>
     </main>
 </body>
 
