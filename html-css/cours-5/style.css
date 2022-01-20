@@ -106,7 +106,7 @@ column {
 section column {
     box-sizing: border-box;
     height: 500px;
-    width: 400px;
+    flex-basis: 25%;
     padding: 40px;
     background-color: cadetblue;
     border: teal solid 2px;
