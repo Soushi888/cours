@@ -88,6 +88,7 @@ section h2 {
 section img {
     align-self: center;
     height: 200px;
+    border: black solid 2px;
 }
 
 columns {
@@ -108,6 +109,8 @@ section column {
     width: 400px;
     padding: 40px;
     background-color: cadetblue;
+    border: teal solid 2px;
+
 }
 
 #section-2 {
@@ -126,8 +129,10 @@ section column {
     height: 200px;
     width: 200px;
     background-color: #4381dd;
+    border: #194381 solid 2px;
 }
 
 #section-2 columns box:nth-last-of-type(odd) {
     background-color: #194381;
+    border: #4381dd solid 2px;
 }
