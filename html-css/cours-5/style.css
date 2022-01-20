@@ -13,8 +13,6 @@ a:hover {
 }
 
 top-bar {
-    position: fixed;
-    width: calc(100vw - 100px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,7 +55,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh);
+    height: calc(100vh - 100px);
     color: white;
     background-image: url("images/nature.jpg");
     background-attachment: fixed;
@@ -74,6 +72,37 @@ main>h2 {
     padding-left: 50px;
 }
 
-section>h2 {
-    margin: 50px;
+#section-1 {
+    background-color: #F0D7A1;
+    padding: 20px;
+}
+
+
+#section-1 h2 {
+    margin-bottom: 20px;
+}
+
+#section-1 img {
+    align-self: center;
+    height: 200px;
+}
+
+columns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#section-1 column {
+    box-sizing: border-box;
+    height: 500px;
+    width: 400px;
+    padding: 40px;
+    background-color: cadetblue;
 }
