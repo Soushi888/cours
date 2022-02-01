@@ -1,0 +1,38 @@
+top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 100px;
+    background-color: rgb(1, 105, 105);
+}
+
+
+top-bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+top-bar .logo img {
+    width: 80px;
+}
+
+top-bar nav {
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+top-bar nav a.active {
+    color: rgb(237 199 6);
+}
+
+top-bar .social img {
+    width: 50px;
+}
+
+top-bar .social img:hover {
+    filter: grayscale(1);
+}
