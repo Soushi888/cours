@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Balise link avec l'attribut rel="stylesheet : permet de lier un fichier css au document -->
+    <link rel="stylesheet" href="top-bar.css">
+    <title>HTML / CSS | Home</title>
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <top-bar>
+        <div class="logo">
+            <a href="#section-1"><img src="images/html_css.png" alt="HTML et CSS"></a>
+            <a href="/">
+                <h1>HTML / CSS</h1>
+            </a>
+        </div>
+
+        <nav>
+            <a href="/" class="active">HTML</a>
+            <a href="/css_base.html">Base CSS</a>
+            <a href="/css_base_2.html">Base CSS 2</a>
+            <a href="/flexbox.html">Flexbox</a>
+            <a href="/grid.html">Grid</a>
+        </nav>
+
+        <div class="social">
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-logo.png" alt=""></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-logo.png" alt=""></a>
+        </div>
+    </top-bar>
+
+    <!-- Balise d'entête -->
+    <h1>Ma première page</h1>
+
+    <!-- Balise de paragraphe -->
+    <p>Hello World !</p>
+
+    <!-- Balise Bold ou Strong -->
+    <p>Hello <b>World</b> !</p>
+    <p>Hello <strong>World</strong> !</p>
+
+    <!-- Balise Important ou Italic -->
+    <p>Hello <em>World</em> !</p>
+    <p>Hello <i>World</i> !</p>
+
+    <!-- Images et Liens -->
+    <h2>Images et liens</h2>
+    <p>Un paragraphe avec des liens :
+        <!-- Balise <br> pour break line - saut de ligne -->
+        <br>
+        <!-- target="_blank" permet d'ouvrir le lien dans une nouvelle page -->
+        <a href="https://www.youtube.com" target="_blank">Youtube</a>
+        <br>
+        <!-- Lien interne -->
+        <a href="about.html">About</a>
+    </p>
+
+    <!-- Image externe -->
+    <img src="https://www.cryptonewsz.com/wp-content/uploads/2019/04/HOLO-Cryptonewsz-01.png" alt="Logo Holochain"
+        width="600">
+    <br>
+    <!-- Image interne -->
+    <img src="images/avatar.png" alt="Avatar de Soushi888">
+    <br>
+
+    <!-- Liste à puce -->
+    <h2>Listes à puces</h2>
+    <ul>
+        <li>Ligne 1</li>
+        <li>Ligne 2</li>
+        <li>Ligne 3</li>
+        <!-- Liste imbriquée -->
+        <ul>
+            <li>Ligne 4</li>
+            <li>Ligne 5</li>
+            <ul>
+                <li>Ligne 8</li>
+            </ul>
+            <li>Ligne 6</li>
+        </ul>
+        <li>Ligne 7</li>
+    </ul>
+
+    <!-- Balise <hr> permet de créer des séparateur dans la page web -->
+    <hr>
+    <h2>Iframe</h2>
+    <!-- Balise <iframe> pour embarquer le contenu d'un autre document dans un document -->
+    <iframe src="form-table/table.html" frameborder="0" width="400" height="400"></iframe>
+    <iframe src="form-table/form.html" frameborder="0" width="100%" height="550"></iframe>
+    <br>
+    <!-- Elle est surtout utile pour intégrer ddu contenu multimédia -->
+    <!-- Exemple : Lecteur vidéo de Youtube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/INajqSXWbsk" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <br>
+    <iframe width="560" height="315" src="https://youtube.com/embed/koxiwiiIyO4" title="Youtube Video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <!-- Lecteur audio de SoundCloud -->
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/277305091&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <div
+        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <a href="https://soundcloud.com/sacha-pignot" title="Sacha Pignot" target="_blank"
+            style="color: #cccccc; text-decoration: none;">Sacha Pignot</a> · <a
+            href="https://soundcloud.com/sacha-pignot/la-folle-de-manhattan" title="La folle de manhattan"
+            target="_blank" style="color: #cccccc; text-decoration: none;">La folle de manhattan</a>
+    </div>
+</body>
+
+</html>

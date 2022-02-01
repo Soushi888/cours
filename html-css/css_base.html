@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="top-bar.css">
+    <!-- Balise style : permet d'écrire du CSS dans l'entête d'unfichier html -->
+    <style>
+        /* CSS selectors reference : https://www.w3schools.com/cssref/css_selectors.asp
+examples : https://www.w3schools.com/cssref/trysel.asp */
+
+        /* Selecteur universel */
+        * {
+            /* outline: red solid 1px; */
+        }
+
+        /* :root : racine du document */
+        :root {
+            /* background-color : couleur de fond */
+            background-color: rgb(24, 24, 24);
+            color: rgb(218, 218, 218);
+        }
+
+        /* utiliser un tag comme selecteur */
+        h1 {
+            /* color : couleur d'un text au format rgb, hsl ou hexadecimal */
+            /* valeure rgba : le a signifie alpha, l'opacité. */
+            /* 0 = invisible, 1 = 100% opaque */
+            color: rgba(45, 216, 150, 0.753);
+        }
+
+        /* utiliser une classe comme selecteur */
+        .underline {
+            /* text-decoration : ligne décorative d'un texte */
+            /*      underline : ligne sous le texte */
+            /*      overline : ligne au dessus du texte */
+            /*      line-through : texte barré */
+            text-decoration: underline;
+        }
+
+        /* utiliser un id comme sélecteur */
+        #title {
+            /* font-size : taille du texte en piexels (px) ou autres */
+            color: red;
+            font-size: 35px;
+        }
+
+        .boite-1 {
+            /* padding-left : marge intérieure du côté gauche */
+            padding-left: 10px;
+            background-color: rgb(151, 28, 6);
+        }
+
+        /* Le sélecteur enfant (>) sélectionne tous les éléments qui sont les enfants d'un élément spécifié. */
+        /* sélectione tout les <p> dont le parent a la classe "boite-1" */
+        .boite-1>p {
+            /* font-wigth: épaisseur (graisse) du texte. */
+            font-weight: 600;
+        }
+
+        .boite-1>h2 {
+            color: yellow;
+        }
+
+        /* Le sélecteur descendant ( ) correspond à tous les éléments qui sont les descendants d'un élément spécifié. */
+        /* sélectione tout les éléments <p> qui descendent des éléments avec la classe "boite-1" */
+        .boite-1 p {
+            color: rgb(209, 243, 14);
+        }
+
+        .boite-2 {
+            /* width : largeur */
+            width: 300px;
+            /* margin : taille des marges extérieures */
+            /* dans ce cas ci, vu qu'une largeur est spécifiée, "auto" centre l'élément */
+            margin: auto;
+            /* padding : taille des marges intérieures */
+            /* quand une seule valeure spécifiée, valeure pour les 4 côtés */
+            padding: 10px;
+            background-color: rgb(136, 19, 136);
+        }
+
+        /* Le sélecteur général de frères (~) sélectionne tous les éléments qui sont les frères suivants d'un élément spécifié. */
+        /* .boite-2 ~ p : tout les <p> après les éléments avec la classe "boite-2" */
+        .boite-2~p {
+            color: rgb(24, 168, 173);
+        }
+
+        /* Le sélecteur frère adjacent (+) est utilisé pour sélectionner un élément qui se trouve directement après un autre élément spécifique. */
+        /* .boite-2 + p : le premier <p> après les éléments avec la classe "boite-2" */
+        .boite-2+p {
+            font-size: 22px;
+        }
+
+        /* Groupe de sélecteurs */
+        /* Séparés par une virgule */
+        #title,
+        .boite-2>h2 {
+            /* text-align : alignement du text */
+            text-align: center;
+        }
+
+        .card {
+            width: 300px;
+            margin: auto;
+            background-color: rgb(238, 238, 238);
+            /* border : Propriété abrégée pour définir la largeur, le style et la couleur de la bordure. */
+            border: #eb0303 solid 2px;
+        }
+
+        .card>h2 {
+            /* si 3 valeures indiquées, ces dernières représentes respectivement top, rigth and left, bottom */
+            margin: 0 0 10px;
+            text-align: center;
+        }
+
+        .card>h2>span {
+            text-decoration: underline;
+        }
+
+        .card img {
+            width: 140px;
+            margin-left: 25%;
+            border: 2px solid #eb0303;
+            border-radius: 70px;
+        }
+
+        .card>p,
+        .card>h2 {
+            color: black;
+            text-align: center;
+        }
+
+        /* Un élément en ligne ne démarre pas sur une nouvelle ligne et ne prend que autant de largeur que nécessaire. */
+        .inline {
+            display: inline;
+        }
+
+        /* Un élément au niveau du bloc commence toujours sur une nouvelle ligne et occupe toute la largeur disponible (s'étend vers la gauche et la droite aussi loin que possible). */
+        .block {
+            display: block;
+        }
+    </style>
+    <title>HTML / CSS | Flexbox</title>
+</head>
+
+<body>
+    <top-bar>
+        <div class="logo">
+            <a href="#section-1"><img src="images/html_css.png" alt="HTML et CSS"></a>
+            <a href="/">
+                <h1>HTML / CSS</h1>
+            </a>
+        </div>
+
+        <nav>
+            <a href="/">HTML</a>
+            <a href="/css_base.html" class="active">Base CSS</a>
+            <a href="/css_base_2.html">Base CSS 2</a>
+            <a href="/flexbox.html">Flexbox</a>
+            <a href="/grid.html">Grid</a>
+        </nav>
+
+        <div class="social">
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter-logo.png" alt=""></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-logo.png" alt=""></a>
+        </div>
+    </top-bar>
+
+    <!-- Balise div : balise générique de type block -->
+    <!-- L'attribut "style" permet d'indiquer directement le syle de l'élément -->
+    <div style="color: rgb(141, 141, 253); font-size: 20px;">
+        <!-- L'attribut "id" permet d'attribuer un identifiant unique à un élément -->
+        <h1 id="title">Hello World !</h1>
+        <!-- Balise span : balise générique de type inline -->
+        <p>Ce paragraphe contient un <span class="underline">span</span></p>
+    </div>
+
+    <!-- L'attribut "class" permet d'attribuer une classe à un élément -->
+    <div class="boite-1">
+        <h2>Boite 1</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto aliquid reprehenderit delectus quis debitis
+            magnam dolores inventore reiciendis libero pariatur dicta deleniti, consequatur et, quae vel sint distinctio
+            maiores? Nam!</p>
+        <div class="boite-2">
+            <h2>Boite 2</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto aliquid reprehenderit delectus quis
+                debitis
+                magnam dolores inventore reiciendis libero pariatur dicta deleniti, consequatur et, quae vel sint
+                distinctio
+                maiores? Nam!</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id dolore, eligendi aliquid architecto ex
+            quae aspernatur! Aliquam hic nihil vero eum.</p>
+        <p>Earum dolore voluptatibus accusantium recusandae totam quisquam explicabo?</p>
+    </div>
+
+    <div class="card">
+        <h2>Nom : <span>Beardman</span></h2>
+        <div>
+            <img src="/images/beardo.png" alt="Beardo le Beardman">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium alias dolores temporibus fugiat nisi
+            animi rem molestiae voluptates earum ab, veritatis assumenda, impedit quisquam laboriosam? Voluptate aliquam
+            suscipit esse consectetur?</p>
+    </div>
+
+    <div>
+        <div class="inline">sadasdasd</div>
+        <div class="inline">sadasdasd</div>
+        <br>
+        <span class="block">dsfsdfds</span>
+        <span class="block">dsfsdfds</span>
+        <span class="block">dsfsdfds</span>
+    </div>
+</body>
+
+</html>
