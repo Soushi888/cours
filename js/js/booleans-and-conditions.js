@@ -3,6 +3,7 @@ DISPLAY = false;
 const name = "Sacha";
 const isOk = true;
 
+// if-else statement
 if (isOk) {
 	console.log("It's ok !");
 } else {
@@ -12,6 +13,7 @@ if (isOk) {
 let status;
 const age = "55";
 
+// else if statement
 if (age >= 21) {
 	status = "major";
 } else if (age < 21) {
@@ -24,12 +26,13 @@ if (status) {
 	console.log(`${name} is ${age} years old and he or she is a ${status}.`);
 }
 
-
+// ternary operator (condition ? if_output : else_ouput)
 isOk ? console.log("It's Ok !") : console.log("It's NOT Ok !");
 status = age >= 21 ? "major" : "minor";
 status && console.log(`${name} is ${age} years old and he or she is a ${status}.`);
 
 
+// switch statement
 switch (status) {
 	case "major":
 		console.log("You can drink in a bar.");
@@ -42,6 +45,7 @@ switch (status) {
 }
 
 
+// prompt and alert
 if (DISPLAY) {
 	let answer = prompt("Hello human, how are you ?")
 

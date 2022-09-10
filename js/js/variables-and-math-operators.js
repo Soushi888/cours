@@ -18,7 +18,7 @@ let total = 0;
 total = total + 2;
 console.log(total);
 
-total += 6;
+total += 6; // total = total + 6
 console.log(total);
 
 // mathematics operators
