@@ -1,14 +1,15 @@
 "use strict"
 
 // arrays
-let fruitArray = ["apple", "banana", "pamplemous", "cherry"];
-let topThreeScores = [300, 295, 280];
+console.group("Arrays");
+let fruitArray = ["apple", "banana", "pamplemous", "cherry"]; // array of strings
+let topThreeScores = [300, 295, 280]; // array of numbers
 
 let firstFruit = fruitArray[0]; // index starts at 0
-let lastFruit = fruitArray[fruitArray.length - 1];
+let lastFruit = fruitArray[fruitArray.length - 1]; // last index = length - 1
 
-let firstFruit2 = fruitArray.at(0);
-let lastFruit2 = fruitArray.at(-1);
+let firstFruit2 = fruitArray.at(0); // index starts at 0
+let lastFruit2 = fruitArray.at(-1); // last index = -1 or length - 1
 
 console.log(fruitArray); // ["apple", "banana", "pamplemous", "cherry"]
 console.log(fruitArray.length); // array length
@@ -30,7 +31,7 @@ topFiveScores.push(275); // push add a value to the array and return the new len
 console.log("top five scores :", topFiveScores);
 let topSixScores = [...topFiveScores, 273]; // spread operator to add a value to the array
 console.log("top six scores :", topSixScores);
-let newBestScore = [301, ...topSixScores.slice(1, -1)]; // slice return a new array with the values between the two index (excluded)
+let newBestScore = [301, ...topSixScores.slice(1, topSixScores.length)]; // slice return a new array with the values between the two index (excluded)
 console.log("new best score :", newBestScore);
 topSixScores.pop(); // remove the last value of the array and return it
 console.log("top five scores again :", topSixScores);
@@ -38,24 +39,33 @@ let newTopThreeScores = newBestScore.slice(0, 3);
 console.log("new top three scores :", newTopThreeScores);
 
 let fruitArray2 = [...fruitArray];
-fruitArray2.shift();
+fruitArray2.shift(); // remove the first value of the array and return it
 console.log("fruit array without the first fruit :", fruitArray2);
-fruitArray2.unshift("pear");
+fruitArray2.unshift("pear"); // add a value at the beginning of the array and return the new length of the array
 console.log("fruit array with a new first fruit :", fruitArray2);
+
+let fruitString = fruitArray.join(", "); // join return a string with the values of the array separated by the indicated separator
+console.log(`The fruit selection of the days is : ${fruitString}.`);
+let fruitArrayBack = fruitString.split(", "); // split return an array with the values of the string separated by the indicated separator
+console.log("The fruit selection of the days is :", fruitArrayBack);
+
 
 let mixedArray = [["apple", 300, true], ["banana", 295, false], ["pamplemous", 280, true]];
 console.log(mixedArray); // array of arrays
 console.log(mixedArray[0]); // first array
 console.log(mixedArray[0][0]); // apple
+console.log(mixedArray.at(-1)[0]); // pamplemous
+console.groupEnd();
 
-console.log("--------------------------------------------");
+console.group("Loops");
+
 // Loops
 
 // While loops
 let i = 0;
 while (i <= 10) {
 	if (i % 2 === 0) console.log(i);
-	i++;    // i += 1
+	i++; // i += 1 or i = i + 1
 }
 
 // Do While loops (execute at least once)
@@ -74,8 +84,8 @@ for (let i = 0; i <= 50; i += 10) {
 	console.log(i);
 }
 
-console.log("--------------------------------------------");
-
+console.groupEnd();
+console.group("Iterating over an array");
 // Iterating over arrays with for loops
 for (let i = 0; i <= topThreeScores.length - 1; i++) {
 	console.log(`#${i + 1} : ${topThreeScores[i]}`);
@@ -83,11 +93,12 @@ for (let i = 0; i <= topThreeScores.length - 1; i++) {
 
 // Iterate over an array with for...of
 for (let score of topThreeScores) {
-	if (score === 300) continue; // skip the current iteration
+	if (score === 300) continue; // continue skip the current iteration
 	if (score > 300) {
 		console.error("The score can not be greater than 300."); // console.error is used to display an error message
 		break // stop the loop
 	}
+
 	console.log(score);
 }
 
@@ -98,4 +109,5 @@ for (let fruit of fruitArray) {
 // Iterate over an array with forEach
 topThreeScores.forEach((score, i) => {
 	console.log(`#${i + 1} : ${score}`);
-})
+});
+console.groupEnd();

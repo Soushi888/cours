@@ -1,10 +1,13 @@
+"use strict"
 console.log('Hello World');
 
-// constantes globales
-YEAR = 2022;
-console.log(YEAR);
+// global variables
+var a = 1;
 
 // const = immutable variable
+const YEAR = 2022;
+console.log(YEAR);
+
 const name = "Sacha";
 console.log(name);
 console.log("Your name is " + name);
@@ -31,7 +34,6 @@ console.log(`3 - 5 = ${subtraction}`);
 
 const multiplication = 3 * 3;
 console.log(`3 x 3 = ${multiplication}`);
-
 const division = 50 / 2;
 console.log(`50 / 2 = ${division}`);
 
