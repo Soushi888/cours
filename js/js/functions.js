@@ -54,16 +54,31 @@ console.log("2² = " + square(2));
 const sayGoodbye = () => console.log("Goodbye !");
 sayGoodbye();
 
+// example functions
 function countAndEnumeratePeople(people) {
 	const lastPerson = people.pop();
 	console.log(`There are ${people.length} people in the party : ${people.join(", ")} and ${lastPerson}.`);
 }
-
 const people = ["Sacha Pignot", "Soushi888", "Shizore", "Shizoulfe"];
 const people2 = ["Louis", "Mathilde", "Sacha", "Jean", "Rose", "Soushi"];
-
 countAndEnumeratePeople(people);
 countAndEnumeratePeople(people2);
+
+function IsMajor(age) {
+	return age >= 18;
+}
+
+let age = 24;
+console.log(`With an age of ${age}, you are ${IsMajor(age) ? "major" : "minor"}.`);
+
+// recursive function
+function factorial(num) {
+	if (num === 1) {
+		return 1;
+	}
+	return num * factorial(num - 1);
+}
+console.log(factorial(5));
 
 // IIFE (Immediately Invoked Function Expression)
 (function () {
@@ -120,3 +135,18 @@ const inner2 = outer3();
 inner2();
 inner2(2);
 
+// prototype
+String.prototype.log = function () {
+	console.log(this);
+}
+
+String.prototype.isEmpty = function () {
+	return this.length === 0;
+}
+
+"Hello".log();
+console.log("Hello".isEmpty());
+console.log(" ".isEmpty());
+console.log("".isEmpty());
+
+`Hello Soushi, you have ${square(4)} emails !`.log();
