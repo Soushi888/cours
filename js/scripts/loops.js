@@ -26,8 +26,17 @@ for (let i = 0; i <= 50; i += 10) {
 	console.log(i);
 }
 
-
+// Indented for loops
+for (let i = 0; i <= 3; i++) {
+	console.group("i = " + i);
+	for (let j = 0; j <= 3; j++) {
+		console.log(`i = ${i}, j = ${j}`);
+	}
+	console.groupEnd();
+}
 console.groupEnd();
+
+
 console.group("Iterating over an array");
 
 let fruitArray = ["apple", "banana", "pamplemous", "cherry"]; // array of strings

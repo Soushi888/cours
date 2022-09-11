@@ -19,6 +19,10 @@ console.log(`third fruit : ${fruitArray[2]}`); // pamplemous
 console.log(`last fruit : ${lastFruit2}`); // cherry
 console.log("is there a perfect score ?", topThreeScores.includes(300)); // include check if the array contain the indicated value
 
+// destructuring an array
+let [firstScore, secondScore, thirdScore] = topThreeScores;
+console.log(firstScore, secondScore, thirdScore);
+
 let topThreeScores2 = topThreeScores; // this is a reference to the array, not a copy
 topThreeScores2[0] = 400;
 console.log(topThreeScores); // the original array has been modified
@@ -29,20 +33,29 @@ console.log("top four scores :", topFourScores);
 let topFiveScores = [...topFourScores] // spread operator to copy an array (or an object) to another variable without reference to the original variable
 topFiveScores.push(275); // push add a value to the array and return the new length of the array
 console.log("top five scores :", topFiveScores);
-let topSixScores = [...topFiveScores, 273]; // spread operator to add a value to the array
+let topSixScores = [...topFiveScores, 273]; // spread operator to add a value to the array. This is equivalent to topFiveScores.concat(273)
 console.log("top six scores :", topSixScores);
-let newBestScore = [301, ...topSixScores.slice(1, topSixScores.length)]; // slice return a new array with the values between the two index (excluded)
+
+let [, ...restOfTopSixScores] = topSixScores; // destructuring an array to get the first value and the rest of the array
+let newBestScore = [301, ...restOfTopSixScores]; // change the first value of the array
 console.log("new best score :", newBestScore);
+
+let topSixScores2 = [...topSixScores];
+topSixScores2[0] = 301; // change the first value of the array
+
+
 topSixScores.pop(); // remove the last value of the array and return it
 console.log("top five scores again :", topSixScores);
-let newTopThreeScores = newBestScore.slice(0, 3);
-console.log("new top three scores :", newTopThreeScores);
 
 let fruitArray2 = [...fruitArray];
 fruitArray2.shift(); // remove the first value of the array and return it
 console.log("fruit array without the first fruit :", fruitArray2);
 fruitArray2.unshift("pear"); // add a value at the beginning of the array and return the new length of the array
 console.log("fruit array with a new first fruit :", fruitArray2);
+
+let newTopThreeScores = newBestScore.slice(0, 3); // slice return a new array with the values between the two index (excluded)
+let newBestScore2 = [301, ...topSixScores.slice(1, topSixScores.length)];
+console.log("new top three scores :", newTopThreeScores);
 
 let fruitString = fruitArray.join(", "); // join return a string with the values of the array separated by the indicated separator
 console.log(`The fruit selection of the days is : ${fruitString}.`);
