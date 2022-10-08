@@ -20,6 +20,18 @@ if (age >= 21) {
 	status = "minor";
 }
 
+let stringNumber = "0";
+// type coercion
+if (stringNumber !== 0) {
+	console.log("number is not 0 !");
+}
+if (parseInt(stringNumber) === 0) {
+	console.log("number is 0 !");
+}
+if (+stringNumber === 0) {
+	console.log("number is 0 !");
+}
+
 console.log(status);
 
 if (status) {
