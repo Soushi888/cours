@@ -1,5 +1,5 @@
 // conditions
-DISPLAY = false;
+DISPLAY = true;
 const name = "Sacha";
 const isOk = true;
 
@@ -59,7 +59,7 @@ switch (status) {
 
 // prompt and alert
 if (DISPLAY) {
-	let answer = prompt("Hello human, how are you ?")
+	let answer = prompt("Hello human, how are you ?").trim();
 
 	if (!answer) {
 		alert("Hooo, you ignore me... :'(");
