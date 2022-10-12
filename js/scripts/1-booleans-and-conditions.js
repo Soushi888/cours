@@ -38,7 +38,7 @@ if (status) {
 	console.log(`${name} is ${age} years old and he or she is a ${status}.`);
 }
 
-// ternary operator (condition ? if_output : else_ouput)
+// ternary operator (condition ? if_output : else_output)
 isOk ? console.log("It's Ok !") : console.log("It's NOT Ok !");
 status = age >= 21 ? "major" : "minor";
 status && console.log(`${name} is ${age} years old and he or she is a ${status}.`);

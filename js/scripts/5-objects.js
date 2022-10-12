@@ -32,12 +32,12 @@ let person2 = {
 	name: "Sacha",
 	age: 29,
 	profession: "Web Developer",
-	birthday: function () { // for use the this keyword, the function must be declared with the function keyword
+	birthday: function () { // for use the "this" keyword, the function must be declared with the function keyword
 		this.age++;
 		console.log(`${this.name} is now ${this.age} years old.`);
 	},
-	changeProfession: (newProfession) => { // if the function is declared with the arrow function, the this keyword is not available.
-		person2.profession = newProfession; // the this keyword is replaced by the parent object
+	changeProfession: (newProfession) => { // if the function is declared with the arrow function, the "this" keyword is not available.
+		person2.profession = newProfession; // the "this" keyword is replaced by the parent object
 		console.log(`${person2.name} is now a ${person2.profession}.`);
 	}
 }
