@@ -56,7 +56,7 @@ sayGoodbye();
 
 // example functions
 function countAndEnumeratePeople(people) {
-	const lastPerson = people.pop();
+	const lastPerson = people.at(-1);
 	console.log(`There are ${people.length} people in the party : ${people.join(", ")} and ${lastPerson}.`);
 }
 const people = ["Sacha Pignot", "Soushi888", "Shizore", "Shizoulfe"];
