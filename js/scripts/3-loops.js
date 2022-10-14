@@ -70,3 +70,21 @@ topThreeScores.forEach((score, i) => {
 	console.log(`#${i + 1} : ${score}`);
 });
 console.groupEnd();
+
+// Iterate over and return an array with map
+let topThreeScoresDoubled = topThreeScores.map((score, i) => {
+	return score * 2;
+});
+console.log(topThreeScoresDoubled);
+
+// Iterate over and return an array with filter
+let topThreeScoresGreaterThan280 = topThreeScores.filter((score, i) => {
+	return score > 280;
+});
+console.log(topThreeScoresGreaterThan280);
+
+// Iterate over and return a single value with reduce
+let topThreeScoresSum = topThreeScores.reduce((accumulator, score, i) => {
+	return accumulator + score;
+});
+console.log(topThreeScoresSum);
