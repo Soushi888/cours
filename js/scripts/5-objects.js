@@ -92,3 +92,23 @@ console.log(people2);
 for (let person of people2) {
 	console.log(`${person.name} is ${person.age} years old and he is a ${person.profession}.`);
 }
+
+// object methods
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(Object.entries(person));
+
+// transform an object into an array
+let personArray = Object.entries(person);
+for (let [key, value] of personArray) {
+	console.log(`${key}: ${value}`);
+}
+
+personArray.forEach(([key, value]) => {
+	console.log(`${key}: ${value}`);
+});
+
+// transform an array into an object
+let personObject = Object.fromEntries(personArray);
+console.log(personObject);
+
