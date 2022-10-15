@@ -130,3 +130,24 @@ personArray.forEach(([key, value]) => {
 let personObject = Object.fromEntries(personArray);
 console.log(personObject);
 
+// Object factory
+// The factory is a function that is used to create an object.
+function createAnimal(name, specie, age) {
+	function getSpecie() {
+		console.log(`${name} is a ${specie}.`);
+	}
+
+	function rename(newName) {
+		console.log(`${name} is now ${newName}.`);
+		this.name = newName;
+	}
+
+	// return an object
+	return {name, specie, age, getSpecie, rename};
+}
+
+let animal = createAnimal("Fido", "dog", 3);
+console.log(animal);
+animal.getSpecie();
+animal.rename("Rex");
+console.log(animal);

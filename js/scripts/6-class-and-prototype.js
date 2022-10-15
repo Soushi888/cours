@@ -1,27 +1,5 @@
 "use strict";
 
-// Object factory
-// The factory is a function that is used to create an object.
-function createAnimal(name, specie, age) {
-	function getSpecie() {
-		console.log(`${name} is a ${specie}.`);
-	}
-
-	function rename(newName) {
-		console.log(`${name} is now ${newName}.`);
-		this.name = newName;
-	}
-
-	// return an object
-	return {name, specie, age, getSpecie, rename};
-}
-
-let animal = createAnimal("Fido", "dog", 3);
-console.log(animal);
-animal.getSpecie();
-animal.rename("Rex");
-console.log(animal);
-
 // Object constructor
 // A constructor is a function that is used to create objects of a same type.
 function Person(name, age) {
@@ -78,10 +56,13 @@ person1.changeName("Sacha2");
 // Object class
 // The class is a template that is used to create objects of the same type.
 class Citizen {
+	#privateProperty = "private property";
+
 	constructor(name, age, address = {}) {
 		this.name = name;
 		this.age = age;
 		this.address = address;
+		console.log(this.#privateProperty);
 	}
 
 	birthday() {
@@ -98,6 +79,7 @@ class Citizen {
 // create objects from the class
 let person3 = new Citizen("Sacha", 29);
 console.log(person3);
+console.log(person3.#privateProperty); // error: private properties are not accessible outside the class
 
 let person4 = new Citizen("John", 30, address);
 console.log(person4);
