@@ -36,6 +36,10 @@ const subtract = function (num1, num2) {
 }
 console.log("3 - 2 = " + subtract(3, 2));
 
+// new Function syntax
+const countArray = new Function("array", "return array.length");
+console.log("Array length = " + countArray([1, 2, 3, 4, 5]));
+
 // arrow function with multiple lines
 const multiply = (num1, num2) => {
 	return num1 * num2;

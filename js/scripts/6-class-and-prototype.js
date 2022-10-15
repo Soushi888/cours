@@ -8,7 +8,7 @@ function Person(name, age) {
 
 	this.birthday = function () {
 		this.age++;
-		console.log(`${this.name} is now ${this.age} years old.`);
+		console.log(`${this.name} is now ${this.age} years old. 🎉`);
 	};
 }
 
@@ -79,7 +79,7 @@ class Citizen {
 // create objects from the class
 let person3 = new Citizen("Sacha", 29);
 console.log(person3);
-console.log(person3.#privateProperty); // error: private properties are not accessible outside the class
+// console.log(person3.#privateProperty); // error: private properties are not accessible outside the class
 
 let person4 = new Citizen("John", 30, address);
 console.log(person4);
