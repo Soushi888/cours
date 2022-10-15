@@ -23,7 +23,7 @@ console.log(`${person.name} is ${person.age} years old and he is a ${person.prof
 let obj2 = {
 	property: "obj2 property value",
 	method: function () {
-		console.log(this.property); // this is a reference to the object itself
+		console.log(this.property); // "this" is a reference to the object itself
 	}
 }
 obj2.method();
@@ -87,6 +87,24 @@ let people2 = [
 	}
 ];
 console.log(people2);
+
+// add a new property to the object
+people2[0].address = address;
+console.log(people2);
+
+// remove a property from the object
+delete people2[0].address;
+console.log(people2);
+
+// copy an object
+let person4 = {...person3};
+console.log(person4);
+let person5 = Object.assign({}, person3);
+console.log(person5);
+
+// merge two objects
+let person6 = {...person, address: {...address}};
+console.log(person6);
 
 // iterate over an array of objects
 for (let person of people2) {
