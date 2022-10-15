@@ -80,3 +80,11 @@ randomScores2.sort((a, b) => a - b); // sort the array with a function
 console.log("random scores sorted with a function :", randomScores2);
 randomScores2.reverse(); // reverse the array
 console.log("random scores sorted and reversed :", randomScores);
+
+// remove non unique values
+let arrayWithDuplicates = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("array with duplicates :", arrayWithDuplicates);
+let arrayWithUniqueValues2 = arrayWithDuplicates.filter((value, index, array) => array.indexOf(value) === index);
+console.log("array with unique values with filter :", arrayWithUniqueValues2);
+let arrayWithUniqueValues = [...new Set(arrayWithDuplicates)];
+console.log("array with unique values :", arrayWithUniqueValues);
