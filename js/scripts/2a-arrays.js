@@ -69,3 +69,14 @@ console.log(mixedArray[0]); // first array
 console.log(mixedArray[0][0]); // apple
 console.log(mixedArray.at(-1)[0]); // pamplemous
 console.groupEnd();
+
+let randomScores = [90, 80, 95, 85, 75, 70, 60, 100, 50, 40, 30, 20, 10];
+console.log("random scores :", randomScores);
+randomScores.sort(); // sort the array
+console.log("random scores sorted :", randomScores);
+
+let randomScores2 = [...randomScores];
+randomScores2.sort((a, b) => a - b); // sort the array with a function
+console.log("random scores sorted with a function :", randomScores2);
+randomScores2.reverse(); // reverse the array
+console.log("random scores sorted and reversed :", randomScores);
