@@ -57,6 +57,7 @@ person1.changeName("Sacha2");
 // The class is a template that is used to create objects of the same type.
 class Citizen {
 	#privateProperty = "private property";
+	static staticProperty = "static property";
 
 	constructor(name, age, address = {}) {
 		this.name = name;
@@ -74,12 +75,18 @@ class Citizen {
 		this.address = newAddress;
 		console.log(`${this.name} now lives at ${this.address.city}.`);
 	}
+
+	static staticMethod() {
+		console.log("static method");
+	}
 }
 
 // create objects from the class
 let person3 = new Citizen("Sacha", 29);
 console.log(person3);
 // console.log(person3.#privateProperty); // error: private properties are not accessible outside the class
+console.log(Citizen.staticProperty); // static properties are accessible even without creating an object
+Citizen.staticMethod(); // static methods are accessible even without creating an object
 
 let person4 = new Citizen("John", 30, address);
 console.log(person4);
