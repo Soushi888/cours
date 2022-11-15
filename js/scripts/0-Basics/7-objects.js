@@ -24,9 +24,16 @@ let obj2 = {
 	property: "obj2 property value",
 	method: function () {
 		console.log(this.property); // "this" is a reference to the object itself
-	}
+	},
+	method2() { // ES6 syntax
+		console.log(this.property);
+	},
+	method3: () => { // ES6 syntax
+		console.log(this.property); // in a arrow function "this" is the global object
+	},
 }
 obj2.method();
+obj2.method2();
 
 let person2 = {
 	name: "Sacha",

@@ -10,29 +10,46 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!--  <script src="scripts/0-Basics/1a-variables-and-math-operators.js"></script>-->
-  <!--  <script src="scripts/0-Basics/1b-booleans-and-conditions.js"></script>-->
-  <!--  <script src="scripts/0-Basics/2a-arrays.js"></script>-->
-  <!--  <script src="scripts/0-Basics/2b-strings.js"></script>-->
-  <!--  <script src="scripts/0-Basics/3a-loops.js"></script>-->
-  <!--  <script src="scripts/0-Basics/3b-functions.js"></script>-->
-  <!--  <script src="scripts/0-Basics/4a-objects.js"></script>-->
-  <!--  <script src="scripts/0-Basics/4b-class-and-prototype.js"></script>-->
-  <script src="scripts/1-Navigator/form-data.js" defer></script>
+  <!--  Basics -->
+  <!--  <script src="scripts/0-Basics/1-variables-and-math-operators.js"></script>-->
+  <!--  <script src="scripts/0-Basics/2-booleans-and-conditions.js"></script>-->
+  <!--  <script src="scripts/0-Basics/3-arrays.js"></script>-->
+  <!--  <script src="scripts/0-Basics/4-strings.js"></script>-->
+  <!--  <script src="scripts/0-Basics/5-loops.js"></script>-->
+  <!--  <script src="scripts/0-Basics/6-functions.js"></script>-->
+  <!--  <script src="scripts/0-Basics/7-objects.js"></script>-->
+  <!--  <script src="scripts/0-Basics/8-class-and-prototype.js"></script>-->
+
+  <!-- Navigator -->
+  <!-- defer is used to load the script after the page is loaded -->
+  <script src="scripts/1-Navigator/1-dom.js" defer></script>
+  <!--  <script src="scripts/1-Navigator/2-events.js" defer></script>-->
+  <!--  <script src="scripts/1-Navigator/3-forms.js" defer></script>-->
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <div id="1-1-dom">
+    <h1 id="title">Hello <a href="#title">World</a></h1>
+    <p class="paragraph">Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Cumque, delectus
+      expedita. <br>A at commodi ea eligendi est incidunt modi nostrum <a href="#">omnis possimus</a> quae quidem
+      tenetur, voluptas. Aut hic incidunt ipsa!</p>
+    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus expedita. <br>A at
+      commodi a eligendi est incidunt modi nostrum omnis possimus quae quidem tenetur, <a href="#">voluptas</a>. Aut hic
+      incidunt ipsa!</p>
 
-  <p class="result"></p>
+    <div id="container"></div>
+  </div>
 
-  <form id="form" method="post">
-    <label>Name : <input type="text" name="name"></label>
-    <label>Age : <input type="number" name="age"></label>
 
-    <button type="submit">Submit</button>
-  </form>
-  <div id="data"></div>
+  <!--  <div id="1-3-forms">-->
+  <!--    <form id="form" method="post">-->
+  <!--      <label>Name : <input type="text" name="name"></label>-->
+  <!--      <label>Age : <input type="number" name="age"></label>-->
+
+  <!--      <button type="submit">Submit</button>-->
+  <!--    </form>-->
+  <!--    <div id="data"></div>-->
+  <!--  </div>-->
 </body>
 
 </html>

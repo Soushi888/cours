@@ -4,6 +4,7 @@
 console.group("Loops");
 
 // While loops
+// They are used to repeat a block of code while a condition is true
 let i = 0;
 while (i <= 10) {
 	if (i % 2 === 0) console.log(i);
@@ -17,7 +18,7 @@ do {
 	i++;
 } while (i <= 3);
 
-// For loops
+// For loops (for (initialization; condition; increment))
 for (let i = 0; i <= 3; i++) {
 	console.log(i);
 }
