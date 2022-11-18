@@ -18,6 +18,10 @@ let person = {
 }
 console.log(`${person.name} is ${person.age} years old and he is a ${person.profession}.`);
 
+
+//--------------------------------------------------------------------------------------------------------------
+
+
 // Object with methods
 // A method is a property that contains a function
 let obj2 = {
@@ -34,6 +38,10 @@ let obj2 = {
 }
 obj2.method();
 obj2.method2();
+
+
+//--------------------------------------------------------------------------------------------------------------
+
 
 let person2 = {
 	name: "Sacha",
@@ -52,6 +60,10 @@ console.log(person2);
 person2.birthday();
 person2.changeProfession("Web Designer");
 console.log(person2);
+
+
+//--------------------------------------------------------------------------------------------------------------
+
 
 // destructuring object
 let {name, age, profession} = person;
@@ -95,6 +107,10 @@ let people2 = [
 ];
 console.log(people2);
 
+
+//--------------------------------------------------------------------------------------------------------------
+
+
 // add a new property to the object
 people2[0].address = address;
 console.log(people2);
@@ -118,6 +134,10 @@ for (let person of people2) {
 	console.log(`${person.name} is ${person.age} years old and he is a ${person.profession}.`);
 }
 
+
+//--------------------------------------------------------------------------------------------------------------
+
+
 // object methods
 console.log(Object.keys(person));
 console.log(Object.values(person));
@@ -136,6 +156,10 @@ personArray.forEach(([key, value]) => {
 // transform an array into an object
 let personObject = Object.fromEntries(personArray);
 console.log(personObject);
+
+
+//--------------------------------------------------------------------------------------------------------------
+
 
 // Object factory
 // The factory is a function that is used to create an object.
