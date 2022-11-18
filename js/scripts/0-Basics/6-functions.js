@@ -138,19 +138,3 @@ function outer3() {
 const inner2 = outer3();
 inner2();
 inner2(2);
-
-// prototype
-String.prototype.log = function () {
-	console.log(this);
-}
-
-String.prototype.isEmpty = function () {
-	return this.length === 0;
-}
-
-"Hello".log();
-console.log("Hello".isEmpty());
-console.log(" ".isEmpty());
-console.log("".isEmpty());
-
-`Hello Soushi, you have ${square(4)} emails !`.log();

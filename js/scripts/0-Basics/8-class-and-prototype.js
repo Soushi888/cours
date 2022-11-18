@@ -31,9 +31,29 @@ let address = {
 person1.address = address; // add a new property to the object
 console.log(person1.address, person2.address); // work only for one object, not for all objects of the same type
 
+
+//--------------------------------------------------------------------------------------------------------------
+
+
 // prototype
 // The prototype is an object that is shared by all objects of the same type,
 // and it's used to add properties and methods to all objects of the same type.
+String.prototype.log = function () {
+	console.log(this);
+}
+
+String.prototype.isEmpty = function () {
+	return this.length === 0;
+}
+
+"Hello".log();
+console.log("Hello".isEmpty());
+console.log(" ".isEmpty());
+console.log("".isEmpty());
+
+`Hello Soushi, you have ${square(4)} emails !`.log();
+
+
 Array.prototype.first = function () {
 	return this[0];
 };
@@ -52,6 +72,10 @@ Person.prototype.changeName = function (newName) {
 };
 
 person1.changeName("Sacha2");
+
+
+// --------------------------------------------------------------------------------------------
+
 
 // Object class
 // The class is a template that is used to create objects of the same type.
@@ -103,6 +127,10 @@ person4.changeName("John2");
 // compare the Person and Citizen prototypes
 console.log(Person.prototype);
 console.log(Citizen.prototype);
+
+
+// --------------------------------------------------------------------------------------------
+
 
 // object inheritance
 class Employee extends Citizen {
