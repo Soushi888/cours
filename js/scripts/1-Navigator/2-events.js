@@ -112,3 +112,31 @@ parentBoxEl.addEventListener("click", function (event) {
 	console.log("this :", this); // this is the element that the event listener is attached to if the event listener is not an arrow function
 });
 
+
+/* ------------------------------------------------------------------------------------------------- */
+
+// Assign elements to variables
+const autoCompleteInputEl = document.querySelector("input[name='auto-complete']");
+const autoCompleteOutputEl = document.querySelector("#auto-complete-output");
+const autoCompleteListEl = document.querySelector("#auto-complete-list");
+
+// Test data for auto complete
+const searchTerms = ["apple", "banana", "orange", "pineapple", "strawberry", "watermelon", "grape", "kiwi", "mango", "pear", "peach", "plum", "cherry", "raspberry", "blueberry", "blackberry", "coconut", "lemon", "lime", "melon", "papaya", "passion fruit", "pomegranate", "tomato", "avocado", "apricot", "cantaloupe", "fig", "grapefruit", "jackfruit", "lychee", "mandarin", "nectarine", "persimmon", "quince", "star fruit", "tangerine", "yuzu", "durian", "guava", "honeydew", "mulberry", "olive", "pomelo", "rambutan", "soursop", "tamarind", "zucchini"];
+
+autoCompleteInputEl.addEventListener("keyup", (event) => { // keyUp event occurs when a key is released
+	const searchTerm = event.target.value; // event.target.value is the value of the input element
+	let searchResults = searchTerms.filter((term) => term.startsWith(searchTerm)); // filter the search terms that start with the search term
+	if (searchResults && searchResults !== searchTerm) autoCompleteOutputEl.style.display = "block"; // display the output element if there are search results
+	else autoCompleteOutputEl.style.display = "none"; // hide the output element if there are no search results
+
+	autoCompleteListEl.innerHTML = ""; // clear the list element
+	searchResults.forEach((result) => autoCompleteListEl.innerHTML += `<li>${result}</li>`); // add the search results to the list element
+
+	// Add event listeners to the list items
+	autoCompleteListEl.querySelectorAll("li").forEach((li) => {
+		li.addEventListener("click", (event) => {
+			autoCompleteInputEl.value = event.target.textContent; // fill the input element with the text content of the clicked list item
+			autoCompleteOutputEl.style.display = "none"; // hide the output element
+		});
+	});
+});
