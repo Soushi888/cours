@@ -23,8 +23,10 @@
   <!-- Navigator -->
   <!-- defer is used to load the script after the page is loaded -->
   <!--  <script src="scripts/2-Navigator/1-dom.js" defer></script>-->
-  <script src="scripts/2-Navigator/2-events.js" defer></script>
-  <!--  <script src="scripts/2-Navigator/3-forms.js" defer></script>-->
+  <!--  <script src="scripts/2-Navigator/2-events.js" defer></script>-->
+  <script src="scripts/2-Navigator/3-forms.js" defer></script>
+
+  <!--  <script src="exercises/bob.js"></script>-->
 </head>
 
 <body>
@@ -40,50 +42,57 @@
   <!--    <div id="container"></div>-->
   <!--  </div>-->
 
+  <!-- ------------------------------------------------------------------------------------------------------------- -->
 
-  <div id="1-2-events">
-    <h1>Events</h1>
-    <p>events are a way to listen for something to happen in the browser</p>
-    <div class="box">
-      <p>Hello !</p>
-      <output id="coords-output"></output>
-    </div>
-    <div>
-      <label>Color : <input type="text" name="color"></label>
-      <span><output id="color-output"></output></span>
-    </div>
-    <br>
-    <button>Click me !</button>
-    <button id="button-2" onclick="buttonClickHandler()">Click me too !</button>
-    <button id="change-color-btn">Change color</button>
+  <!--  <div id="1-2-events">-->
+  <!--    <h1>Events</h1>-->
+  <!--    <p>events are a way to listen for something to happen in the browser</p>-->
+  <!--    <div class="box">-->
+  <!--      <p>Hello !</p>-->
+  <!--      <output id="coords-output"></output>-->
+  <!--    </div>-->
+  <!--    <div>-->
+  <!--      <label>Color : <input type="text" name="color"></label>-->
+  <!--      <span><output id="color-output"></output></span>-->
+  <!--    </div>-->
+  <!--    <br>-->
+  <!--    <button>Click me !</button>-->
+  <!--    <button id="button-2" onclick="buttonClickHandler()">Click me too !</button>-->
+  <!--    <button id="change-color-btn">Change color</button>-->
 
-    <div class="box" id="parent-box">
-      <p>Parent Box</p>
-      <box class="box box-2">Box 2</box>
-      <box class="box box-3">Box 3</box>
-    </div>
+  <!--    <div class="box" id="parent-box">-->
+  <!--      <p>Parent Box</p>-->
+  <!--      <box class="box box-2">Box 2</box>-->
+  <!--      <box class="box box-3">Box 3</box>-->
+  <!--    </div>-->
 
-    <div class="auto-complete">
-      <form autocomplete="off">
-        <label>
-          Auto-complete input : <input type="text" name="auto-complete">
-          </label>
-        <div id="auto-complete-output">
-          <ul id="auto-complete-list"></ul>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!--  <div id="1-3-forms">-->
-  <!--    <form id="form" method="post">-->
-  <!--      <label>Name : <input type="text" name="name"></label>-->
-  <!--      <label>Age : <input type="number" name="age"></label>-->
-
-  <!--      <button type="submit">Submit</button>-->
-  <!--    </form>-->
-  <!--    <div id="data"></div>-->
+  <!--    <div class="auto-complete">-->
+  <!--      <form autocomplete="off">-->
+  <!--        <label>-->
+  <!--          Auto-complete input : <input type="text" name="auto-complete">-->
+  <!--        </label>-->
+  <!--        <div id="auto-complete-output">-->
+  <!--          <ul id="auto-complete-list"></ul>-->
+  <!--        </div>-->
+  <!--      </form>-->
+  <!--    </div>-->
   <!--  </div>-->
+
+  <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+    <div id="1-3-forms">
+      <div class="error" id="errors"></div>
+      <form id="contact-form" method="post">
+        <label>Name : <input type="text" name="name"></label>
+        <label>Email : <input type="text" name="email"></label>
+        <label>Subject : <input type="text" name="subject"></label>
+        <label>Message : <textarea name="message"></textarea></label>
+
+        <button type="submit" id="submit">Submit</button>
+        <button type="reset" id="reset">Reset</button>
+      </form>
+      <div id="data"></div>
+    </div>
 </body>
 
 </html>
