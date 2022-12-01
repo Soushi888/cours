@@ -1,8 +1,8 @@
 "use strict";
 
-const formEl = document.querySelector("#contact-form"); // form element
+// const formEl = document.getElementById("contact-form"); // form element
+const formEl = document.forms["contact-form"]; // form element
 const {name, email, subject, message} = formEl; // destructuring
-console.log(name, email, subject, message);
 
 const submitBtn = document.querySelector("#submit"); // submit button
 const resetBtn = document.querySelector("#reset"); // reset button
@@ -17,9 +17,28 @@ submitBtn.addEventListener("click", (e) => {
 		&& checkEmail(email) // check email
 		&& checkLength(subject, 3, 30) // check subject length
 	) {
-		alert("success");
+		showResults();
+
+		const additionalData = {
+			navigator: navigator.userAgent,
+			date: new Date().toLocaleString(),
+			screen: {
+				width: screen.width,
+				height: screen.height,
+			}
+		};
+
+		for (let key in additionalData) {
+			const input = document.createElement("input");
+			input.type = "hidden";
+			input.name = key;
+			input.value = additionalData[key];
+			formEl.appendChild(input);
+		}
+		formEl.requestSubmit(); // submit form
 	}
 });
+
 
 resetBtn.addEventListener("click", (e) => {
 	// clear error message
@@ -38,26 +57,29 @@ const errorsEl = document.querySelector("#errors"); // error message element
 
 // validation functions
 function checkRequired(inputArr) {
+	let errors = 0;
 	inputArr.forEach((input) => {
 		if (input.value.trim() === "") {
-			// showError(input, `All fields are required`, false);
-			showErrorInputOnly(input);
-			return false;
+			console.log(input);
+			showError(input, `All fields are required`, false);
+			// showErrorInputOnly(input);
+			return errors++;
 		}
 		showSuccess(input);
 	});
 
-	return true;
+	console.log(errors === 0);
+	return errors === 0;
 }
 
 function checkLength(input, min, max) {
 	if (input.value.length < min) {
-		// showError(input, `${input.name} must be at least ${min} characters`);
-		showErrorInputOnly(input);
+		showError(input, `${input.name} must be at least ${min} characters`);
+		// showErrorInputOnly(input);
 		return false;
 	} else if (input.value.length > max) {
-		// showError(input, `${input.name} must be less than ${max} characters`);
-		showErrorInputOnly(input);
+		showError(input, `${input.name} must be less than ${max} characters`);
+		// showErrorInputOnly(input);
 		return false;
 	}
 
@@ -73,8 +95,8 @@ function checkEmail(input) {
 		return true;
 	}
 
-	// showError(input, "Email is not valid");
-	showErrorInputOnly(input);
+	showError(input, "Email is not valid");
+	// showErrorInputOnly(input);
 	return false;
 }
 
@@ -99,19 +121,23 @@ function showSuccess(input) {
 	input.classList.add("success");
 }
 
+function showResults() {
+	const resultsEl = document.querySelector("#data");
+	resultsEl.innerHTML = `
+		<h2>Results</h2>
+		<p>Name: ${name.value}</p>
+		<p>Email: ${email.value}</p>
+		<p>Subject: ${subject.value}</p>
+		<p>Message: ${message.value}</p>
+	`;
+}
+
 
 // ----------------------------------------------------------------------------------------------
 
 
 // validate inputs on change
-name.addEventListener("input", (e) => checkLength(name, 2, 30));
-email.addEventListener("input", (e) => checkEmail(email));
-subject.addEventListener("input", (e) => checkLength(subject, 3, 100));
-message.addEventListener("input", (e) => checkLength(message, 5, 500));
-
-
-// ----------------------------------------------------------------------------------------------
-
-// formData object
-const formData = new FormData(formEl);
-// console.log(formData.entries());
+// name.addEventListener("input", (e) => checkLength(name, 2, 30));
+// email.addEventListener("input", (e) => checkEmail(email));
+// subject.addEventListener("input", (e) => checkLength(subject, 3, 100));
+// message.addEventListener("input", (e) => checkLength(message, 5, 500));
