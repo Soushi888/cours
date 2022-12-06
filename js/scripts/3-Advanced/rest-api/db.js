@@ -22,7 +22,7 @@ let db = new sqlite3.Database(DB_SOURCE, (err) => {
 					// Table already created
 				} else {
 					// Table just created, creating some rows
-					var insert = 'INSERT INTO user (name, email, password) VALUES (?,?,?)'
+					const insert = 'INSERT INTO user (name, email, password) VALUES (?,?,?)'
 					db.run(insert, ["admin", "admin@example.com", md5("admin123456")])
 					db.run(insert, ["user", "user@example.com", md5("user123456")])
 				}
