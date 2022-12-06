@@ -110,3 +110,15 @@ console.log("Saved result: ", savedResult);
 setTimeout(() => {
 	console.log("Saved result after 2 seconds: ", savedResult);
 }, 2000);
+
+
+// Loading display
+const courseSection = document.getElementById("3-2-promise");
+const resultDiv = courseSection.querySelector(".result");
+
+resultDiv.innerHTML = "Loading...";
+getData().then((result) => {
+	resultDiv.innerHTML = result;
+}).catch((error) => {
+	resultDiv.innerHTML = error;
+});
