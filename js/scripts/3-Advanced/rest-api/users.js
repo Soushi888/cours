@@ -1,7 +1,9 @@
 const express = require('express');
+const md5 = require('md5');
 const router = express.Router();
-
 const db = require("./db");
+
+// Get all users
 router.get('/', (req, res) => {
 	const users = db.all('SELECT * FROM user', [], (err, rows) => {
 		if (err) throw err;
@@ -9,7 +11,7 @@ router.get('/', (req, res) => {
 	});
 });
 
-// get one user by id
+// Get one user by id
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
 	const sql = 'SELECT * FROM user WHERE id = ?';
@@ -23,9 +25,11 @@ router.get('/:id', (req, res) => {
 	});
 });
 
-// create a new user
+// Create a new user
 router.post('/', (req, res) => {
 	const errors = [];
+	if (!req.body) return res.status(400).send('Request body is missing');
+
 	if (!req.body.name) {
 		errors.push("No name specified");
 	}
@@ -45,7 +49,58 @@ router.post('/', (req, res) => {
 		password: req.body.password
 	};
 	const sql = 'INSERT INTO user (name, email, password) VALUES (?,?,?)';
-	const params = [data.name, data.email, data.password];
+	const params = [data.name, data.email, md5(data.password)];
+	db.run(sql, params, function (err, result) {
+		if (err) {
+			res.status(400).json({"error": err.message});
+			return;
+		}
+		res.json({
+			"message": "success",
+			"data": data,
+			"id": this.lastID
+		});
+	});
+});
+
+// Update a user
+router.patch('/:id', (req, res) => {
+	const data = {
+		name: req.body.name,
+		email: req.body.email,
+		password: req.body.password
+	};
+	db.run(
+		`UPDATE user set 
+					 name = COALESCE(?,name), 
+					 email = COALESCE(?,email), 
+					 password = COALESCE(?,password) 
+					 WHERE id = ?`,
+		[data.name, data.email, md5(data.password), req.params.id], function (err, result) {
+			if (err) {
+				res.status(400).json({"error": res.message});
+				return;
+			}
+			res.json({
+				message: "success",
+				data: data,
+				changes: this.changes
+			});
+		});
+});
+
+// Delete a user
+router.delete('/:id', (req, res) => {
+	db.run(
+		'DELETE FROM user WHERE id = ?',
+		req.params.id,
+		function (err, result) {
+			if (err) {
+				res.status(400).json({"error": res.message});
+				return;
+			}
+			res.json({"message": "deleted", changes: this.changes});
+		});
 });
 
 module.exports = router;

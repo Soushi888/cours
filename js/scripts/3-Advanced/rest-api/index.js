@@ -3,6 +3,8 @@ const app = express();
 const db = require('./db.js');
 const PORT = 4000;
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
 	res.send({message: 'Hello World!'});
 });
