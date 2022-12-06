@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const db = require('./db.js');
+const users = require('./users.js');
 const PORT = 4000;
 
 app.use(express.json());
@@ -9,7 +10,6 @@ app.get('/', (req, res) => {
 	res.send({message: 'Hello World!'});
 });
 
-const users = require('./users.js');
 app.use('/users', users);
 
 app.use((req, res, next) => {
