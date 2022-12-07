@@ -1,1 +1,0 @@
-In the `script.js` file, you must write the code to make the following happen :
