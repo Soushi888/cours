@@ -86,19 +86,19 @@
 
 <!-- -------------------------------------------------------- -->
 
-  <div id="2-3-forms">
-    <div class="error" id="errors"></div>
-    <form id="contact-form" name="contact-form" method="post" action="scripts/2-Navigator/form-handler.php">
-      <label>Name : <input type="text" name="name"></label>
-      <label>Email : <input type="text" name="email"></label>
-      <label>Subject : <input type="text" name="subject"></label>
-      <label>Message : <textarea name="message"></textarea></label>
+<!--  <div id="2-3-forms">-->
+<!--    <div class="error" id="errors"></div>-->
+<!--    <form id="contact-form" name="contact-form" method="post" action="scripts/2-Navigator/form-handler.php">-->
+<!--      <label>Name : <input type="text" name="name"></label>-->
+<!--      <label>Email : <input type="text" name="email"></label>-->
+<!--      <label>Subject : <input type="text" name="subject"></label>-->
+<!--      <label>Message : <textarea name="message"></textarea></label>-->
 
-      <button type="submit" id="submit">Submit</button>
-      <button type="reset" id="reset">Reset</button>
-    </form>
-    <div id="data"></div>
-  </div>
+<!--      <button type="submit" id="submit">Submit</button>-->
+<!--      <button type="reset" id="reset">Reset</button>-->
+<!--    </form>-->
+<!--    <div id="data"></div>-->
+<!--  </div>-->
 
 <!-- ------------------------------------------------------------------------------------------------------------- -->
 
@@ -107,15 +107,29 @@
 <!--    <div class="result"></div>-->
 <!--</div>-->
 
-<!--<div id="3-3-ajax">-->
-<!--    <h1>Hello World !</h1>-->
-<!--    <form id="pokemon-form">-->
-<!--        <label>Pokemon : <input type="text" name="pokemon"></label>-->
-<!--        <button type="submit">Search</button>-->
-<!--    </form>-->
+<div id="3-3-ajax">
+    <h1>Hello World !</h1>
+    <div class="container">
+        <form id="pokemon-form">
+            <label>Pokemon : <input type="text" name="pokemon"></label>
+            <button type="submit">Search</button>
+        </form>
+        <div class="result"></div>
+    </div>
 
-<!--    <div class="result"></div>-->
-<!--</div>-->
+    <div class="container">
+        <form name="create-user-form">
+            <label>Username : <input type="text" name="username"></label>
+            <label>Email : <input type="email" name="email"></label>
+            <label>Password : <input type="password" name="password"></label>
+            <button type="submit">Create</button>
+        </form>
+        <div class="users-result">
+            <h2>Users</h2>
+            <ul class="users-list"></ul>
+        </div>
+    </div>
+</div>
 
 </body>
 

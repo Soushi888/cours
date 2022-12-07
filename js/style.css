@@ -8,6 +8,18 @@ body {
     height: 100vh;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.container:not(:last-child) {
+    margin-bottom: 50px;
+}
+
 .paragraph {
     text-align: center;
     font-size: 1.5rem;
@@ -128,4 +140,12 @@ body {
 
 #contact-form input:focus-visible.error, #contact-form input:focus-visible.success,#contact-form textarea:focus-visible.error,  #contact-form textarea:focus-visible.success  {
     outline: none;
+}
+
+.user-list-item {
+    list-style: none;
+    margin-bottom: 25px;
+    border: white 1px solid;
+    padding: 10px;
+    cursor: pointer;
 }

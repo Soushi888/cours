@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
 });
 
 // Update a user
-router.patch('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
 	const data = {
 		name: req.body.name,
 		email: req.body.email,
@@ -94,7 +94,7 @@ router.delete('/:id', (req, res) => {
 	db.run(
 		'DELETE FROM user WHERE id = ?',
 		req.params.id,
-		function (err, result) {
+		function (err) {
 			if (err) {
 				res.status(400).json({"error": res.message});
 				return;
