@@ -71,16 +71,15 @@ router.put('/:id', (req, res) => {
 		password: req.body.password
 	};
 	db.run(
-		`UPDATE user set 
-					 name = COALESCE(?,name), 
-					 email = COALESCE(?,email), 
-					 password = COALESCE(?,password) 
-					 WHERE id = ?`,
-		[data.name, data.email, md5(data.password), req.params.id], function (err, result) {
-			if (err) {
-				res.status(400).json({"error": res.message});
-				return;
-			}
+		`UPDATE user
+     set name     = COALESCE(?, name),
+         email    = COALESCE(?, email),
+         password = COALESCE(?, password)
+     WHERE id = ?`,
+		[data.name, data.email, md5(data.password), req.params.id], function (err) {
+			if (err) return res.status(400).json({"error": res.message});
+			if (this.changes === 0) return res.status(404).json({"error": 'User not found'});
+
 			res.json({
 				message: "success",
 				data: data,
@@ -95,10 +94,9 @@ router.delete('/:id', (req, res) => {
 		'DELETE FROM user WHERE id = ?',
 		req.params.id,
 		function (err) {
-			if (err) {
-				res.status(400).json({"error": res.message});
-				return;
-			}
+			if (err) return res.status(400).json({"error": res.message});
+			if (this.changes === 0) return res.status(404).json({"error": "User not found"});
+
 			res.json({"message": "deleted", changes: this.changes});
 		});
 });

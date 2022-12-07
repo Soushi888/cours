@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const db = require('./db.js');
 const users = require('./users.js');
 const PORT = 4000;
 
@@ -14,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.use('/users', users);
 
-app.use((req, res, next) => {
+app.use((req, res) => {
 	res.status(404).send({message: 'Not found'});
 });
 
