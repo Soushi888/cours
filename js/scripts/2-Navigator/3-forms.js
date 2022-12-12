@@ -28,6 +28,7 @@ submitBtn.addEventListener("click", (e) => {
 			}
 		};
 
+		// for each additional data property, create a new hidden input
 		for (let key in additionalData) {
 			const input = document.createElement("input");
 			input.type = "hidden";
@@ -111,6 +112,7 @@ function showError(input, message, append = true) {
 	input.classList.remove("success");
 }
 
+// showErrorsInputOnly function is used to show errors only on the input field without appending the error message to the error message element. It is used for the 'validate inputs on change' example.
 function showErrorInputOnly(input) {
 	input.classList.add("error");
 	input.classList.remove("success");

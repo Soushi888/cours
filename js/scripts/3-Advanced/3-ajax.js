@@ -1,11 +1,11 @@
 const pokeapi_url = 'https://pokeapi.co/api/v2/pokemon/ditto';
 
 // Fetch the data from the API
-// fetch(pokeapi_url)
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data);
-//     });
+fetch(pokeapi_url)
+	.then(response => response.json())
+	.then(data => {
+		console.log(data);
+	});
 
 // Fetch the data from the API with an async function
 async function getPokemon() {
@@ -13,32 +13,35 @@ async function getPokemon() {
 	return await response.json();
 }
 
+// Use the async function to get the data
 const pokemons = getPokemon().then(data => {
 	console.log(data);
 });
-console.log(pokemons);
+console.log(pokemons); // If not consumed, the promise will still be pending
 
 const pokeForm = document.forms['pokemon-form'];
 const pokemonInput = pokeForm['pokemon'];
 const result = document.querySelector('.result');
 
-pokeForm.addEventListener('submit', async e => {
-	e.preventDefault();
-	const pokemon = pokemonInput.value.toLowerCase();
-	const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+pokeForm.addEventListener('submit', async evt => {
+	evt.preventDefault();
+	const pokemon = pokemonInput.value.toLowerCase(); // Get the value from the input and make it lowercase
+	const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`; // Create the URL with the value from the input
 
+	// Use try/catch to handle errors
 	try {
-		const response = await fetch(url);
-		const data = await response.json();
+		const response = await fetch(url); // Fetch the data from the API
+		const data = await response.json(); // Convert the response to JSON
 
 		result.innerHTML = generatePokemonHTML(data)
-	} catch (error) {
+	} catch (error) { // If there is an error, display it
 		result.innerHTML = `<h2 class="card-header">No Pokemon Found</h2>`;
 	}
 });
 
+/// generatePokemonHTML function return an HTML string with the data from the API
 function generatePokemonHTML(data) {
-	const capitalizedName = data.name[0].toUpperCase() + data.name.slice(1);
+	const capitalizedName = data.name[0].toUpperCase() + data.name.slice(1); // Capitalize the first letter of the name
 
 	return `
     <div class="card">
@@ -52,6 +55,7 @@ function generatePokemonHTML(data) {
 
 const localhost_api_url = 'http://localhost:4000/';
 
+/// Get request to the API
 const getHelloWorld = async () => {
 	try {
 		const response = await fetch(localhost_api_url);
@@ -64,6 +68,7 @@ getHelloWorld().then(data => {
 	console.log(data);
 });
 
+/// Get the users from the API
 const getUsers = async () => {
 	try {
 		const response = await fetch(localhost_api_url + 'users');
@@ -73,6 +78,7 @@ const getUsers = async () => {
 	}
 }
 
+/// Get a user from the API
 const getUser = async (id) => {
 	try {
 		const response = await fetch(localhost_api_url + 'users/' + id);
@@ -82,6 +88,7 @@ const getUser = async (id) => {
 	}
 }
 
+/// Post request to create a user
 const createUser = async (user) => {
 	try {
 		const response = await fetch(localhost_api_url + 'users', {
@@ -97,6 +104,7 @@ const createUser = async (user) => {
 	}
 }
 
+/// Put request to update a user
 const updateUser = async (id, user) => {
 	try {
 		const response = await fetch(localhost_api_url + 'users/' + id, {
@@ -112,6 +120,7 @@ const updateUser = async (id, user) => {
 	}
 }
 
+/// Delete request to delete a user
 const deleteUser = async (id) => {
 	try {
 		const response = await fetch(localhost_api_url + 'users/' + id, {
@@ -128,25 +137,29 @@ const deleteUser = async (id) => {
 const createUserForm = document.forms['create-user-form'];
 const {username, email, password} = createUserForm;
 
-createUserForm.addEventListener('submit', async evt => {
+createUserForm.addEventListener('submit', async evt => { // Submit event listener
 	evt.preventDefault();
 
+	// Create the user object from the form data
 	const user = {
 		name: username.value,
 		email: email.value,
 		password: password.value
 	};
 
-	const response = await createUser(user);
+	const response = await createUser(user); // Create the user
 	console.log(response);
-	createUserForm.reset();
-	showUsers();
+	createUserForm.reset(); // Reset the form
+	showUsers(); // Show the updated list of users
 });
 
+/// Show the users in the DOM
 const showUsers = () => {
 	const usersList = document.querySelector('.users-list');
 
+	// Get the users from the API
 	getUsers().then(users => {
+		// Map over the users and return an HTML string
 		usersList.innerHTML = users.map(user => {
 			return `<li class="user-list-item">${user.id} : ${user.name}
 			<ul>
@@ -157,17 +170,18 @@ const showUsers = () => {
 
 		const usersElements = document.querySelectorAll('.user-list-item');
 		usersElements.forEach(userElement => {
+			// Map over the users and add a click event listener
 			userElement.addEventListener('click', async evt => {
 				const userId = evt.currentTarget.innerText.split(' : ')[0];
 				const user = await getUser(userId);
-				const deleteConfirmation = confirm(`Are you sure you want to delete ${user.name} ?`);
-				if (deleteConfirmation) {
-					const response = await deleteUser(userId);
+				const deleteConfirmation = confirm(`Are you sure you want to delete ${user.name} ?`); // Ask the user for deletion confirmation
+				if (deleteConfirmation) { // If the user confirms the deletion
+					const response = await deleteUser(userId); // Delete the user
 					console.log(response);
-					showUsers();
-			}
+					showUsers(); // Show the updated list of users
+				}
 			});
 		});
 	});
 }
-showUsers();
+showUsers(); // Show the users on page load

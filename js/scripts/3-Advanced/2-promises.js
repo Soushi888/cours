@@ -36,7 +36,7 @@ promise4.catch((error) => {
 	console.error(error);
 });
 
-// Promise.all(iterable) returns a single Promise that resolves when all of the promises in the iterable argument have resolved or when the iterable argument contains no promises. It rejects with the reason of the first promise that rejects.
+// Promise.all(iterable) returns a single Promise that resolves when all the promises in the iterable argument have resolved or when the iterable argument contains no promises. It rejects with the reason of the first promise that rejects.
 const promise5 = Promise.all([promise1, promise2, promise3, promise4]);
 promise3.then((result) => {
 	console.log(result);
