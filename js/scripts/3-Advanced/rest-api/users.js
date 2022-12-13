@@ -5,7 +5,7 @@ const db = require("./db");
 
 // Get all users
 router.get('/', (req, res) => {
-	const users = db.all('SELECT * FROM user', [], (err, rows) => {
+	const users = db.all('SELECT * FROM users', [], (err, rows) => {
 		if (err) throw err;
 		res.send(rows);
 	});
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 // Get one user by id
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
-	const sql = 'SELECT * FROM user WHERE id = ?';
+	const sql = 'SELECT * FROM users WHERE id = ?';
 	const params = [id];
 	db.get(sql, params, (err, row) => {
 		if (err) {
@@ -91,7 +91,7 @@ router.put('/:id', (req, res) => {
 // Delete a user
 router.delete('/:id', (req, res) => {
 	db.run(
-		'DELETE FROM user WHERE id = ?',
+		'DELETE FROM users WHERE id = ?',
 		req.params.id,
 		function (err) {
 			if (err) return res.status(400).json({"error": res.message});
