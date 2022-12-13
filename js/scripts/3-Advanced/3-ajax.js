@@ -1,5 +1,20 @@
 const pokeapi_url = 'https://pokeapi.co/api/v2/pokemon/ditto';
 
+// XMLHttpRequest
+const xhr = new XMLHttpRequest();
+xhr.open('GET', pokeapi_url, true);
+xhr.onload = function () {
+if (this.status === 200) {
+		const data = JSON.parse(this.responseText);
+		const html = generatePokemonHTML(data);
+		document.querySelector('.pokemon').innerHTML = html;
+	} else {
+		console.log('Error');
+	}
+}
+
+console.log(xhr.send);
+
 // Fetch the data from the API
 fetch(pokeapi_url)
 	.then(response => response.json())
