@@ -1,6 +1,7 @@
 const pokeapi_url = 'https://pokeapi.co/api/v2/pokemon/ditto';
 
 // XMLHttpRequest
+// https://www.w3schools.com/xml/xml_whatis.asp
 const xhr = new XMLHttpRequest();
 xhr.open('GET', pokeapi_url, true);
 xhr.onload = function () {
@@ -167,33 +168,32 @@ createUserForm.addEventListener('submit', async evt => { // Submit event listene
 });
 
 /// Show the users in the DOM
-const showUsers = () => {
+const showUsers = async () => {
 	const usersList = document.querySelector('.users-list');
 
 	// Get the users from the API
-	getUsers().then(users => {
-		// Map over the users and return an HTML string
-		usersList.innerHTML = users.map(user => {
-			return `<li class="user-list-item">${user.id} : ${user.name}
+	const users = await getUsers();
+	// Map over the users and return an HTML string
+	usersList.innerHTML = users.map(user => {
+		return `<li class="user-list-item">${user.id} : ${user.name}
 			<ul>
 				<li>email : ${user.email}</li>
 				<li>password : ${user.password}</li>
 			</ul></li>`;
-		}).join('');
+	}).join('');
 
-		const usersElements = document.querySelectorAll('.user-list-item');
-		usersElements.forEach(userElement => {
-			// Map over the users and add a click event listener
-			userElement.addEventListener('click', async evt => {
-				const userId = evt.currentTarget.innerText.split(' : ')[0];
-				const user = await getUser(userId);
-				const deleteConfirmation = confirm(`Are you sure you want to delete ${user.name} ?`); // Ask the user for deletion confirmation
-				if (deleteConfirmation) { // If the user confirms the deletion
-					const response = await deleteUser(userId); // Delete the user
-					console.log(response);
-					showUsers(); // Show the updated list of users
-				}
-			});
+	const usersElements = document.querySelectorAll('.user-list-item');
+	usersElements.forEach(userElement => {
+		// Map over the users and add a click event listener
+		userElement.addEventListener('click', async evt => {
+			const userId = evt.currentTarget.innerText.split(' : ')[0];
+			const user = await getUser(userId);
+			const deleteConfirmation = confirm(`Are you sure you want to delete ${user.name} ?`); // Ask the user for deletion confirmation
+			if (deleteConfirmation) { // If the user confirms the deletion
+				const response = await deleteUser(userId); // Delete the user
+				console.log(response);
+				showUsers(); // Show the updated list of users
+			}
 		});
 	});
 }
