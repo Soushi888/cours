@@ -1,10 +1,8 @@
-[//]: # (Totorial about how to install node js with nvm)
-
 # Node JS Installation with NVM
 
 ## What is Node JS?
 
-Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a
+Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a
 browser.
 Node.js lets developers use JavaScript to write command line tools and for server-side scripting among other things.
 
