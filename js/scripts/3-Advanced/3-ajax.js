@@ -4,16 +4,15 @@ const pokeapi_url = 'https://pokeapi.co/api/v2/pokemon/ditto';
 const xhr = new XMLHttpRequest();
 xhr.open('GET', pokeapi_url, true);
 xhr.onload = function () {
-if (this.status === 200) {
+	if (this.status === 200) {
 		const data = JSON.parse(this.responseText);
-		const html = generatePokemonHTML(data);
-		document.querySelector('.pokemon').innerHTML = html;
+		console.log(data);
 	} else {
 		console.log('Error');
 	}
 }
 
-console.log(xhr.send);
+xhr.send();
 
 // Fetch the data from the API
 fetch(pokeapi_url)
@@ -29,10 +28,9 @@ async function getPokemon() {
 }
 
 // Use the async function to get the data
-const pokemons = getPokemon().then(data => {
+getPokemon().then(data => {
 	console.log(data);
 });
-console.log(pokemons); // If not consumed, the promise will still be pending
 
 const pokeForm = document.forms['pokemon-form'];
 const pokemonInput = pokeForm['pokemon'];
@@ -86,7 +84,7 @@ getHelloWorld().then(data => {
 /// Get the users from the API
 const getUsers = async () => {
 	try {
-		const response = await fetch(localhost_api_url + 'users');
+		const response = await fetch(`${localhost_api_url}users`);
 		return await response.json();
 	} catch (error) {
 		console.error(error);
@@ -96,7 +94,7 @@ const getUsers = async () => {
 /// Get a user from the API
 const getUser = async (id) => {
 	try {
-		const response = await fetch(localhost_api_url + 'users/' + id);
+		const response = await fetch(`${localhost_api_url}users/${id}`);
 		return await response.json();
 	} catch (error) {
 		console.error(error);
@@ -106,7 +104,7 @@ const getUser = async (id) => {
 /// Post request to create a user
 const createUser = async (user) => {
 	try {
-		const response = await fetch(localhost_api_url + 'users', {
+		const response = await fetch(`${localhost_api_url}users`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -122,7 +120,7 @@ const createUser = async (user) => {
 /// Put request to update a user
 const updateUser = async (id, user) => {
 	try {
-		const response = await fetch(localhost_api_url + 'users/' + id, {
+		const response = await fetch(`${localhost_api_url}users/${id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',
@@ -138,7 +136,7 @@ const updateUser = async (id, user) => {
 /// Delete request to delete a user
 const deleteUser = async (id) => {
 	try {
-		const response = await fetch(localhost_api_url + 'users/' + id, {
+		const response = await fetch(`${localhost_api_url}users/${id}`, {
 			method: 'DELETE',
 		});
 		return await response.json();

@@ -5,7 +5,7 @@ const db = require("./db");
 
 // Get all users
 router.get('/', (req, res) => {
-	const users = db.all('SELECT * FROM users', [], (err, rows) => {
+	db.all('SELECT * FROM users', [], (err, rows) => {
 		if (err) throw err;
 		res.send(rows);
 	});
@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
 	};
 	const sql = 'INSERT INTO user (name, email, password) VALUES (?,?,?)';
 	const params = [data.name, data.email, md5(data.password)];
-	db.run(sql, params, function (err, result) {
+	db.run(sql, params, function (err) {
 		if (err) {
 			res.status(400).json({"error": err.message});
 			return;
