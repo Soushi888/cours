@@ -1,6 +1,7 @@
 # Luxon library with the Parcel bundler
 
 The goal of this exercise is to learn how to use the [Luxon](https://moment.github.io/luxon/) library with the [Parcel](https://parceljs.org/) bundler.
+
 [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon)
 
 ## Instructions
