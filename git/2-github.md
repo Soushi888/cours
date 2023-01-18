@@ -4,7 +4,7 @@ Github is a web-based Git repository hosting service. It offers all the distribu
 
 [GitHub website](https://github.com)
 [GitHub documentation](https://docs.github.com/en)
-[Github Desktop](https://desktop.github.com) (for Windows and Mac)
+[GitHub Desktop](https://desktop.github.com) (for Windows and Mac)
 
 ## Basic Workflow
 
