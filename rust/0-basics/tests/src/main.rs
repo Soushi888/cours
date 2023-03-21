@@ -1,9 +1,11 @@
-struct Unit;
+struct Point {
+  x: i32,
+  y: i32,
+}
 
 fn main() {
+  let x = Point { x: 1, y: 2 };
+  let y = &x;
 
-  let unit = Unit;
-  let array = [1, 2, 3, 4, 5];
-
-  array.iter().f
+  println!("x: {}, y: {}", x.x, y.x);
 }
