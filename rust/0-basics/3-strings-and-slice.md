@@ -1,4 +1,4 @@
-# Rust lesson 3 - Strings and Slice
+# Rust lesson 3 - Strings and Slices
 
 ## Strings
 
