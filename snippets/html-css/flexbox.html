@@ -1,74 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="flexbox.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="flexbox.css" />
     <title>HTML / CSS | Flexbox</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <top-bar>
-        <div class="logo">
-            <a href="#section-1"><img src="images/html_css.png" alt="HTML et CSS"></a>
-            <a href="/">
-                <h1>HTML / CSS</h1>
-            </a>
-        </div>
+      <div class="logo">
+        <a href="#section-1"
+          ><img src="images/html_css.png" alt="HTML et CSS"
+        /></a>
+        <a href="./">
+          <h1>HTML / CSS</h1>
+        </a>
+      </div>
 
-        <nav>
-            <a href="./">HTML</a>
-            <a href="./css_base.html">Base CSS</a>
-            <a href="./css_base_2.html">Base CSS 2</a>
-            <a href="./flexbox.html" class="active">Flexbox</a>
-            <a href="./grid.html">Grid</a>
-        </nav>
+      <nav>
+        <a href="./">HTML</a>
+        <a href="./css_base.html">Base CSS</a>
+        <a href="./css_base_2.html">Base CSS 2</a>
+        <a href="./flexbox.html" class="active">Flexbox</a>
+        <a href="./grid.html">Grid</a>
+      </nav>
 
-        <div class="social">
-            <a href="https://twitter.com" target="_blank"><img src="images/twitter-logo.png" alt=""></a>
-            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-logo.png" alt=""></a>
-        </div>
+      <div class="social">
+        <a href="https://twitter.com" target="_blank"
+          ><img src="images/twitter-logo.png" alt=""
+        /></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><img src="images/linkedin-logo.png" alt=""
+        /></a>
+      </div>
     </top-bar>
 
     <main>
-        <header>
-            <!-- <card> aussi est une balise HTML personalisée. -->
-            <card>
-                <h2>Bienvenu !</h2>
-            </card>
-        </header>
+      <header>
+        <!-- <card> aussi est une balise HTML personalisée. -->
+        <card>
+          <h2>Bienvenu !</h2>
+        </card>
+      </header>
 
-        <section id="section-1">
-            <h2>FlexBox</h2>
-            <!-- <columns> et <column> aussi est une balise HTML personalisée. -->
-            <columns>
-                <column>
-                    <h3>Hello</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, illo. Fugit quam accusamus magnam iusto, beatae aliquam commodi modi, tempora eaque sint doloremque! Optio voluptas qui officia adipisci veniam odit!</p>
-                </column>
-                <img src="images/fuck-qr.png" alt="Fuck QR codes">
-                <column>
-                    <h3>World</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, illo. Fugit quam accusamus magnam iusto, beatae aliquam commodi modi, tempora eaque sint doloremque! Optio voluptas qui officia adipisci veniam odit!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, illo. Fugit quam accusamus magnam iusto, beatae aliquam commodi modi, tempora eaque sint doloremque! Optio voluptas qui officia adipisci veniam odit!</p>
-                </column>
-            </columns>
-        </section>
+      <section id="section-1">
+        <h2>FlexBox</h2>
+        <!-- <columns> et <column> aussi est une balise HTML personalisée. -->
+        <columns>
+          <column>
+            <h3>Hello</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus, illo. Fugit quam accusamus magnam iusto, beatae
+              aliquam commodi modi, tempora eaque sint doloremque! Optio
+              voluptas qui officia adipisci veniam odit!
+            </p>
+          </column>
+          <img src="images/fuck-qr.png" alt="Fuck QR codes" />
+          <column>
+            <h3>World</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus, illo. Fugit quam accusamus magnam iusto, beatae
+              aliquam commodi modi, tempora eaque sint doloremque! Optio
+              voluptas qui officia adipisci veniam odit!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus, illo. Fugit quam accusamus magnam iusto, beatae
+              aliquam commodi modi, tempora eaque sint doloremque! Optio
+              voluptas qui officia adipisci veniam odit!
+            </p>
+          </column>
+        </columns>
+      </section>
 
-        <section id="section-2">
-            <h2>Wrap</h2>
-            <columns>
-                <box>Boîte 1</box>
-                <box>Boîte 2</box>
-                <box>Boîte 3</box>
-                <box>Boîte 4</box>
-                <box>Boîte 5</box>
-                <box>Boîte 6</box>
-                <box>Boîte 7</box>
-                <box>Boîte 8</box>
-            </columns>
-        </section>
+      <section id="section-2">
+        <h2>Wrap</h2>
+        <columns>
+          <box>Boîte 1</box>
+          <box>Boîte 2</box>
+          <box>Boîte 3</box>
+          <box>Boîte 4</box>
+          <box>Boîte 5</box>
+          <box>Boîte 6</box>
+          <box>Boîte 7</box>
+          <box>Boîte 8</box>
+        </columns>
+      </section>
     </main>
-</body>
-
+  </body>
 </html>
