@@ -1,12 +1,14 @@
-<script lang>
+<script>
 	import '@svelteness/kit-docs/client/polyfills/index.js';
 	import '@svelteness/kit-docs/client/styles/normalize.css';
 	import '@svelteness/kit-docs/client/styles/fonts.css';
 	import '@svelteness/kit-docs/client/styles/theme.css';
 	import '@svelteness/kit-docs/client/styles/vars.css';
+	import '../app.css';
 
 	import { page } from '$app/stores';
-	import SvelteLogo from '$img/svelte-horizontal.svg?raw';
+
+	import Avatar from '$img/avatar.png';
 
 	import { Button, KitDocs, KitDocsLayout, createSidebarContext } from '@svelteness/kit-docs';
 
@@ -17,7 +19,12 @@
 
 	/** @type {import('@svelteness/kit-docs').NavbarConfig} */
 	const navbar = {
-		links: [{ title: 'Documentation', slug: '/docs', match: /\/docs/ }]
+		links: [
+			{ title: 'HTML/CSS', slug: '/html-css', match: /\/html-css/ },
+			{ title: 'JS/TS', slug: '/js-ts', match: /\/js-ts/ },
+			{ title: 'Svelte/SvelteKit', slug: '/svelte', match: /\/svelte/ },
+			{ title: 'Rust', slug: '/rust', match: /\/rust/ }
+		]
 	};
 
 	const { activeCategory } = createSidebarContext(sidebar);
@@ -42,7 +49,10 @@
 	<KitDocsLayout {navbar} {sidebar}>
 		<div class="logo" slot="navbar-left">
 			<Button href="/">
-				{@html SvelteLogo}
+				<div class="flex gap-2 items-center">
+					<img src={Avatar} alt="Svelte Logo" width="36" class="rounded-full" />
+					<p>Soushi School</p>
+				</div>
 			</Button>
 		</div>
 

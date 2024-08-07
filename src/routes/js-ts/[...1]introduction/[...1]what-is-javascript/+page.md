@@ -1,5 +1,5 @@
 ---
-title: Page Title
+title: What is JavaScript ?
 description: Page description.
 ---
 

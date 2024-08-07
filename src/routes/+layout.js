@@ -6,6 +6,7 @@ export const prerender = true;
 export const load = createKitDocsLoader({
   sidebar: {
     '/': null,
-    '/docs': '/docs',
+    '/html-css': '/html-css',
+    '/js-ts': '/js-ts',
   },
 });
