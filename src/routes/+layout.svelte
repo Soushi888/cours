@@ -6,9 +6,12 @@
 	import '@svelteness/kit-docs/client/styles/vars.css';
 	import '../app.css';
 
+	import '@svelteness/kit-docs/client/styles/docsearch.css';
+
 	import { navbar } from '$lib/navbar';
 	import Avatar from '$img/avatar.png';
 
+	import '@docsearch/css';
 	import { page } from '$app/stores';
 	import { Button, KitDocs, KitDocsLayout, createSidebarContext } from '@svelteness/kit-docs';
 
@@ -35,7 +38,7 @@
 </svelte:head>
 
 <KitDocs {meta}>
-	<KitDocsLayout {navbar} {sidebar}>
+	<KitDocsLayout search {navbar} {sidebar}>
 		<div class="logo" slot="navbar-left">
 			<Button href="/">
 				<div class="flex gap-2 items-center">
@@ -44,6 +47,8 @@
 				</div>
 			</Button>
 		</div>
+
+		<input type="text" placeholder="Search documentation" slot="search" />
 
 		<slot />
 	</KitDocsLayout>
