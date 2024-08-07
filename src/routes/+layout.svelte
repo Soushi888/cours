@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '@svelteness/kit-docs/client/polyfills/index.js';
 	import '@svelteness/kit-docs/client/styles/normalize.css';
 	import '@svelteness/kit-docs/client/styles/fonts.css';
@@ -6,26 +6,15 @@
 	import '@svelteness/kit-docs/client/styles/vars.css';
 	import '../app.css';
 
-	import { page } from '$app/stores';
-
+	import { navbar } from '$lib/navbar';
 	import Avatar from '$img/avatar.png';
 
+	import { page } from '$app/stores';
 	import { Button, KitDocs, KitDocsLayout, createSidebarContext } from '@svelteness/kit-docs';
 
-	/** @type {import('./$types').LayoutData} */
 	export let data;
 
 	$: ({ meta, sidebar } = data);
-
-	/** @type {import('@svelteness/kit-docs').NavbarConfig} */
-	const navbar = {
-		links: [
-			{ title: 'HTML/CSS', slug: '/html-css', match: /\/html-css/ },
-			{ title: 'JS/TS', slug: '/js-ts', match: /\/js-ts/ },
-			{ title: 'Svelte/SvelteKit', slug: '/svelte', match: /\/svelte/ },
-			{ title: 'Rust', slug: '/rust', match: /\/rust/ }
-		]
-	};
 
 	const { activeCategory } = createSidebarContext(sidebar);
 
@@ -51,7 +40,7 @@
 			<Button href="/">
 				<div class="flex gap-2 items-center">
 					<img src={Avatar} alt="Svelte Logo" width="36" class="rounded-full" />
-					<p>Soushi School</p>
+					<p>Soushi's School</p>
 				</div>
 			</Button>
 		</div>

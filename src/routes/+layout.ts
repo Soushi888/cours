@@ -2,11 +2,9 @@ import { createKitDocsLoader } from '@svelteness/kit-docs';
 
 export const prerender = true;
 
-/** @type {import('./$types').LayoutLoad} */
 export const load = createKitDocsLoader({
-  sidebar: {
-    '/': null,
-    '/html-css': '/html-css',
-    '/js-ts': '/js-ts',
-  },
+	sidebar: {
+		'/html-css': '/html-css',
+		'/js-ts': '/js-ts'
+	}
 });
