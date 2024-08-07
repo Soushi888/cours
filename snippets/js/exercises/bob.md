@@ -1,6 +1,6 @@
 ## Bob
 
-Bob is a lackadaisical teenager. In conversation, his responses are very limited.
+Bob is a lasy teenager. In conversation, his responses are very limited.
 
 - Bob answers 'Sure.' if you ask him a question, such as "How are you?".
 - He answers 'Whoa, chill out!' if you YELL AT HIM (in all capitals).

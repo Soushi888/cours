@@ -1,19 +1,21 @@
-"use strict"
-console.log('Hello World');
+"use strict";
+console.log("Hello World");
 
-// global variables
+// var = global variables
 var a = 1;
 
-// const = immutable variable
-const YEAR = 2022;
+// immutable variable
+YEAR = 2022;
 console.log(YEAR);
 
-const name = "Sacha";
-console.log(name);
-console.log("Your name is " + name);
-console.log("Your name is", name);
-console.log(`Your name is ${name}`);
+// const = immutable variable
+const myName = "Sacha";
+myName = "John";
 
+console.log(myName);
+console.log("Your name is " + myName);
+console.log("Your name is", myName);
+console.log(`Your name is ${myName}`);
 
 // let = mutable variable
 let total = 0;
@@ -25,7 +27,7 @@ total += 6; // total = total + 6
 console.log(total);
 
 // mathematics operators
-console.group("operators")
+console.group("operators");
 const addition = 1 + 4;
 console.log(`1 + 4 = ${addition}`);
 

@@ -1,14 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JS Cours</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!--  Basics -->
     <!--  <script src="scripts/1-Basics/1-variables-and-math-operators.js"></script>-->
@@ -17,7 +18,7 @@
     <!--  <script src="scripts/1-Basics/4-strings.js"></script>-->
     <!--  <script src="scripts/1-Basics/5-loops.js"></script>-->
     <!--  <script src="scripts/1-Basics/6-functions.js"></script>-->
-    <!--  <script src="scripts/1-Basics/7-objects.js"></script>-->
+    <script src="scripts/1-Basics/7-objects.js"></script>
 
     <!-- Navigator -->
     <!-- defer is used to load the script after the page is loaded -->
@@ -26,111 +27,108 @@
     <!--  <script src="scripts/2-Navigator/3-forms.js" defer></script>-->
 
     <!--  <script src="scripts/3-Advanced/1-class-and-prototype.js"></script>-->
-<!--    <script src="scripts/3-Advanced/2-promises.js" defer></script>-->
-      <script src="scripts/3-Advanced/3-ajax.js" defer></script>
+    <!--    <script src="scripts/3-Advanced/2-promises.js" defer></script>-->
+    <!-- <script src="scripts/3-Advanced/3-ajax.js" defer></script> -->
     <!--  <script src="scripts/3-Advanced/4-storage.js"></script>-->
-
 
     <!--  <script src="exercises/bob.+js"></script>-->
     <!--  <script src="exercises/bank-account.js"></script>-->
-</head>
+  </head>
 
-<body>
-<!--  <div id="2-1-dom">-->
-<!--    <h1 id="title">Hello <a href="#title">World</a></h1>-->
-<!--    <p class="paragraph">Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Cumque, delectus-->
-<!--      expedita. <br>A at commodi ea eligendi est incidunt modi nostrum <a href="#">omnis possimus</a> quae quidem-->
-<!--      tenetur, voluptas. Aut hic incidunt ipsa!</p>-->
-<!--    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus expedita. <br>A at-->
-<!--      commodi a eligendi est incidunt modi nostrum omnis possimus quae quidem tenetur, <a href="#">voluptas</a>. Aut hic-->
-<!--      incidunt ipsa!</p>-->
+  <body>
+    <!--  <div id="2-1-dom">-->
+    <!--    <h1 id="title">Hello <a href="#title">World</a></h1>-->
+    <!--    <p class="paragraph">Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Cumque, delectus-->
+    <!--      expedita. <br>A at commodi ea eligendi est incidunt modi nostrum <a href="#">omnis possimus</a> quae quidem-->
+    <!--      tenetur, voluptas. Aut hic incidunt ipsa!</p>-->
+    <!--    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, delectus expedita. <br>A at-->
+    <!--      commodi a eligendi est incidunt modi nostrum omnis possimus quae quidem tenetur, <a href="#">voluptas</a>. Aut hic-->
+    <!--      incidunt ipsa!</p>-->
 
-<!--    <div id="container"></div>-->
-<!--  </div>-->
+    <!--    <div id="container"></div>-->
+    <!--  </div>-->
 
-<!-- ------------------------------------------------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------------------------------------------------- -->
 
-<!--  <div id="2-2-events">-->
-<!--    <h1>Events</h1>-->
-<!--    <p>events are a way to listen for something to happen in the browser</p>-->
-<!--    <div class="box">-->
-<!--      <p>Hello !</p>-->
-<!--      <output id="coords-output"></output>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--      <label>Color : <input type="text" name="color"></label>-->
-<!--      <span><output id="color-output"></output></span>-->
-<!--    </div>-->
-<!--    <br>-->
-<!--    <button>Click me !</button>-->
-<!--    <button id="button-2" onclick="buttonClickHandler()">Click me too !</button>-->
-<!--    <button id="change-color-btn">Change color</button>-->
+    <!--  <div id="2-2-events">-->
+    <!--    <h1>Events</h1>-->
+    <!--    <p>events are a way to listen for something to happen in the browser</p>-->
+    <!--    <div class="box">-->
+    <!--      <p>Hello !</p>-->
+    <!--      <output id="coords-output"></output>-->
+    <!--    </div>-->
+    <!--    <div>-->
+    <!--      <label>Color : <input type="text" name="color"></label>-->
+    <!--      <span><output id="color-output"></output></span>-->
+    <!--    </div>-->
+    <!--    <br>-->
+    <!--    <button>Click me !</button>-->
+    <!--    <button id="button-2" onclick="buttonClickHandler()">Click me too !</button>-->
+    <!--    <button id="change-color-btn">Change color</button>-->
 
-<!--    <div class="box" id="parent-box">-->
-<!--      <p>Parent Box</p>-->
-<!--      <box class="box box-2">Box 2</box>-->
-<!--      <box class="box box-3">Box 3</box>-->
-<!--    </div>-->
+    <!--    <div class="box" id="parent-box">-->
+    <!--      <p>Parent Box</p>-->
+    <!--      <box class="box box-2">Box 2</box>-->
+    <!--      <box class="box box-3">Box 3</box>-->
+    <!--    </div>-->
 
-<!--    <div class="auto-complete">-->
-<!--      <form autocomplete="off">-->
-<!--        <label>-->
-<!--          Auto-complete input : <input type="text" name="auto-complete">-->
-<!--        </label>-->
-<!--        <div id="auto-complete-output">-->
-<!--          <ul id="auto-complete-list"></ul>-->
-<!--        </div>-->
-<!--      </form>-->
-<!--    </div>-->
-<!--  </div>-->
+    <!--    <div class="auto-complete">-->
+    <!--      <form autocomplete="off">-->
+    <!--        <label>-->
+    <!--          Auto-complete input : <input type="text" name="auto-complete">-->
+    <!--        </label>-->
+    <!--        <div id="auto-complete-output">-->
+    <!--          <ul id="auto-complete-list"></ul>-->
+    <!--        </div>-->
+    <!--      </form>-->
+    <!--    </div>-->
+    <!--  </div>-->
 
-<!-- -------------------------------------------------------- -->
+    <!-- -------------------------------------------------------- -->
 
-<!--  <div id="2-3-forms">-->
-<!--    <div class="error" id="errors"></div>-->
-<!--    <form id="contact-form" name="contact-form" method="post" action="scripts/2-Navigator/form-handler.php">-->
-<!--      <label>Name : <input type="text" name="name"></label>-->
-<!--      <label>Email : <input type="text" name="email"></label>-->
-<!--      <label>Subject : <input type="text" name="subject"></label>-->
-<!--      <label>Message : <textarea name="message"></textarea></label>-->
+    <!--  <div id="2-3-forms">-->
+    <!--    <div class="error" id="errors"></div>-->
+    <!--    <form id="contact-form" name="contact-form" method="post" action="scripts/2-Navigator/form-handler.php">-->
+    <!--      <label>Name : <input type="text" name="name"></label>-->
+    <!--      <label>Email : <input type="text" name="email"></label>-->
+    <!--      <label>Subject : <input type="text" name="subject"></label>-->
+    <!--      <label>Message : <textarea name="message"></textarea></label>-->
 
-<!--      <button type="submit" id="submit">Submit</button>-->
-<!--      <button type="reset" id="reset">Reset</button>-->
-<!--    </form>-->
-<!--    <div id="data"></div>-->
-<!--  </div>-->
+    <!--      <button type="submit" id="submit">Submit</button>-->
+    <!--      <button type="reset" id="reset">Reset</button>-->
+    <!--    </form>-->
+    <!--    <div id="data"></div>-->
+    <!--  </div>-->
 
-<!-- ------------------------------------------------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------------------------------------------------- -->
 
-<!--<div id="3-2-promise">-->
-<!--    <h1>Hello World</h1>-->
-<!--    <div class="result"></div>-->
-<!--</div>-->
+    <!--<div id="3-2-promise">-->
+    <!--    <h1>Hello World</h1>-->
+    <!--    <div class="result"></div>-->
+    <!--</div>-->
 
-<div id="3-3-ajax">
-    <h1>Hello World !</h1>
-    <div class="container">
+    <div id="3-3-ajax">
+      <h1>Hello World !</h1>
+      <div class="container">
         <form id="pokemon-form">
-            <label>Pokemon : <input type="text" name="pokemon"></label>
-            <button type="submit">Search</button>
+          <label>Pokemon : <input type="text" name="pokemon" /></label>
+          <button type="submit">Search</button>
         </form>
         <div class="result"></div>
-    </div>
+      </div>
 
-    <div class="container">
+      <div class="container">
         <form name="create-user-form">
-            <label>Username : <input type="text" name="username"></label>
-            <label>Email : <input type="email" name="email"></label>
-            <label>Password : <input type="password" name="password"></label>
-            <button type="submit">Create</button>
+          <label>Username : <input type="text" name="username" /></label>
+          <label>Email : <input type="email" name="email" /></label>
+          <label>Password : <input type="password" name="password" /></label>
+          <button type="submit">Create</button>
         </form>
         <div class="users-result">
-            <h2>Users</h2>
-            <ul class="users-list"></ul>
+          <h2>Users</h2>
+          <ul class="users-list"></ul>
         </div>
+      </div>
     </div>
-</div>
-
-</body>
-
+  </body>
 </html>
