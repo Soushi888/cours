@@ -1,5 +1,5 @@
 ---
-title: Page Title
+title: Functions
 description: Page description.
 ---
 

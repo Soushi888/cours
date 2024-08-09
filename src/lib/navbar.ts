@@ -3,8 +3,9 @@ import type { NavbarConfig } from '@svelteness/kit-docs';
 export const navbar: NavbarConfig = {
 	links: [
 		{ title: 'HTML/CSS', slug: '/html-css', match: /\/html-css/ },
-		{ title: 'JS/TS', slug: '/js-ts', match: /\/js-ts/ }
+		{ title: 'JavaScript/TypeScript', slug: '/js-ts', match: /\/js-ts/ }
 		// { title: 'Svelte/SvelteKit', slug: '/svelte', match: /\/svelte/ },
-		// { title: 'Rust', slug: '/rust', match: /\/rust/ }
+		// { title: 'Rust/WebAssembly', slug: '/rust-wasm', match: /\/rust-wasm/ },
+		// { title: 'Holochain', slug: '/holochain', match: /\/holochain/ }
 	]
 };
