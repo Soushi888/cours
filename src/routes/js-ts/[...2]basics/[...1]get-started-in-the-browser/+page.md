@@ -42,10 +42,10 @@ Inline scripting involves placing your JavaScript code directly within `<script>
 </head>
 <body>
 
-<h1 id="demo">Hello, World!</h1>
+<h1>Hello, World!</h1>
 
 <script>
-document.getElementById('demo').innerHTML = 'Hello, JavaScript!';
+    console.log("Hello, JavaScript!");
 </script>
 
 </body>
@@ -71,7 +71,6 @@ For larger projects or to keep your HTML clean, it's better to use external Java
 <h1 id="greeting">Hello, World!</h1>
 
 <script src="script.js"></script>
-
 </body>
 </html>
 ```

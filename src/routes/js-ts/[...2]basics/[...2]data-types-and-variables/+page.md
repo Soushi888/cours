@@ -5,8 +5,6 @@ description: Unlock the secrets of JavaScript variables and operators with this 
 
 # {$frontmatter.title}
 
-{$frontmatter.description}
-
 ## Variables
 
 A variable in programming is essentially a storage location in the computer's memory that has been assigned a **symbolic name**, which represents some known or unknown quantity of information referred to as a **value**. The variable name is the usual way to reference the stored value, in addition to referring to the variable itself, depending on the context. This separation of name and content allows the name to be used independently of the exact information it represents. The identifier in computer source code can be bound to a value during **run time**, and the value of the variable may thus change throughout the lifetime of a program.
