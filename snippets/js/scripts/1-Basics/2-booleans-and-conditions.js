@@ -1,6 +1,6 @@
 // conditions
-DISPLAY = false;
-const name = "Sacha";
+let display = false;
+const userName = 'Sacha';
 const isOk = true;
 
 // if-else statement
@@ -10,61 +10,59 @@ if (isOk) {
 	console.log("It's NOT ok !");
 }
 
-let status;
-const age = "55";
+let majority;
+const age = '55';
 
 // else if statement
 if (age >= 21) {
-	status = "major";
+	majority = 'major';
 } else if (age < 21) {
-	status = "minor";
+	majority = 'minor';
 }
 
-let stringNumber = "0";
+let stringNumber = '0';
 // type coercion
 if (stringNumber !== 0) {
-	console.log("number is not 0 !");
+	console.log('number is not 0 !');
 }
 if (parseInt(stringNumber) === 0) {
-	console.log("number is 0 !");
+	console.log('number is 0 !');
 }
 if (+stringNumber === 0) {
-	console.log("number is 0 !");
+	console.log('number is 0 !');
 }
 
-console.log(status);
+console.log(majority);
 
-if (status) {
-	console.log(`${name} is ${age} years old and he or she is a ${status}.`);
+if (majority) {
+	console.log(`${userName} is ${age} years old and he or she is a ${majority}.`);
 }
 
 // ternary operator (condition ? if_output : else_output)
 isOk ? console.log("It's Ok !") : console.log("It's NOT Ok !");
-status = age >= 21 ? "major" : "minor";
-status && console.log(`${name} is ${age} years old and he or she is a ${status}.`);
-
+majority = age >= 21 ? 'major' : 'minor';
+majority && console.log(`${userName} is ${age} years old and he or she is a ${majority}.`);
 
 // switch statement
-switch (status) {
-	case "major":
-		console.log("You can drink in a bar.");
+switch (majority) {
+	case 'major':
+		console.log('You can drink in a bar.');
 		break;
-	case "minor":
-		console.log("You are not allowed to buy alcohol.")
+	case 'minor':
+		console.log('You are not allowed to buy alcohol.');
 		break;
 	default:
-		console.log(`Your status is ${status} because your age is "${age}".`)
+		console.log(`Your majority is ${majority} because your age is "${age}".`);
 }
 
-
 // prompt and alert
-if (DISPLAY) {
-	let answer = prompt("Hello human, how are you ?").trim();
+if (display) {
+	let answer = prompt('Hello human, how are you ?').trim();
 
 	if (!answer) {
 		alert("Hooo, you ignore me... :'(");
-	} else if (answer === "Hi !") {
-		alert("Hello !");
+	} else if (answer === 'Hi !') {
+		alert('Hello !');
 	} else {
 		alert("I don't understand, I'm just a simple bot.");
 	}

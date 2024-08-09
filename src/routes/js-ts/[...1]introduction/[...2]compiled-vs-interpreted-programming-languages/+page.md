@@ -7,9 +7,9 @@ description: Page description.
 
 The difference between compiled and interpreted programming languages lies in how their code is executed:
 
-1. **Compiled Languages**: In compiled languages, the source code written by the programmer is translated into machine code by a compiler before it can be executed. This process happens in one step, and the resulting executable file can be run on any compatible computer without needing the original source code or the compiler. Examples of compiled languages include C, C++, and Fortran.
+1. **Compiled Languages**: In compiled languages, the source code written by the programmer is translated into machine code by a compiler before it can be executed. This process happens in one step, and the resulting executable file can be run on any compatible computer without needing the original source code or the compiler. Examples of compiled languages include **C**, **C++**, **Rust** and **Fortran**.
 
-2. **Interpreted Languages**: In contrast, interpreted languages are not directly converted into machine code by a compiler. Instead, an interpreter reads and executes the source code line by line during runtime. This means that the program runs while being read by the interpreter, which translates each line of code into machine code as it goes. The advantage here is that changes made to the source code can be seen immediately without having to recompile the entire program. Examples of interpreted languages include Python, Ruby, and JavaScript (when running in a browser).
+2. **Interpreted Languages**: In contrast, interpreted languages are not directly converted into machine code by a compiler. Instead, an interpreter reads and executes the source code line by line during runtime. This means that the program runs while being read by the interpreter, which translates each line of code into machine code as it goes. The advantage here is that changes made to the source code can be seen immediately without having to recompile the entire program. Examples of interpreted languages include **Python**, **Ruby**, and **JavaScript** (when running in a browser).
 
 In summary, the key differences are:
 - **Compilation Time vs. Runtime Execution**: Compiled languages require all code to be translated into machine code before execution, while interpreted languages execute code line by line during runtime.
