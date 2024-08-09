@@ -5,7 +5,7 @@ description: HTML, which stands for HyperText Markup Language, is the standard m
 
 # {$frontmatter.title}
 
-**HTML**, which stands for HyperText Markup Language, is the standard markup language used to create web pages. It provides the structure of a webpage and uses tags to define elements like headings, paragraphs, links, images, and more. **HTML** is not a programming language but a document markup language that defines the structure and layout of web documents. It forms the foundation of any web page and is essential for creating web content that can be displayed in a web browser.
+**HTML**, which stands for *HyperText Markup Language*, is the standard markup language used to create web pages. It provides the structure of a webpage and uses tags to define elements like headings, paragraphs, links, images, and more. **HTML** is not a programming language but a document markup language that defines the structure and layout of web documents. It forms the foundation of any web page and is essential for creating web content that can be displayed in a web browser.
 
 **HTML** consists of a series of elements, which are represented by tags. Tags are enclosed in angle brackets (`<>`) and typically come in pairs: an opening tag and a closing tag. Some tags, called empty elements, do not require a closing tag. **HTML** tags tell the browser how to display the content and how to apply styles to it.
 

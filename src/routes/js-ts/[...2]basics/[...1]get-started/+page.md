@@ -1,5 +1,5 @@
 ---
-title: Get Started in the Browser
+title: Get Started
 description: Explore the fundamentals of JavaScript and enhance your web development skills with this introductory guide. Perfect for beginners and experienced developers alike, learn how to execute JavaScript directly in your browser, manipulate HTML documents, and leverage external JavaScript files for efficient coding. Discover the power of JavaScript through hands-on examples and best practices, paving the way for dynamic web interactions. Start your JavaScript journey today and elevate your web development capabilities.
 ---
 

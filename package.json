@@ -17,6 +17,8 @@
     "@docsearch/js": "^3.6.1",
     "@iconify-json/ri": "^1.0.0",
     "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-netlify": "^4.3.1",
+    "@sveltejs/adapter-static": "^3.0.2",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@svelteness/kit-docs": "^1.1.5",
