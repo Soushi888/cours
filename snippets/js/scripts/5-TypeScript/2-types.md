@@ -105,9 +105,9 @@ In this example, the index signature is [key: string]: string; which means that 
 
 This allows you to define an object type where the properties are dynamic and can be accessed using a string key. It's a way to define a loose typing for the object properties, and it's commonly used when working with JSON data or any kind of dynamic data coming from external sources.
 
-## Type inheritance
+## Type Combination
 
-TypeScript supports type inheritance, which means that you can create a new type that is based on an existing type. For example:
+TypeScript supports type combination, which means that you can create a new type that is based on an existing type. For example:
 
 ```typescript
 type Person = {

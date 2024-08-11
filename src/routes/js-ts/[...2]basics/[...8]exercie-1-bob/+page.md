@@ -5,9 +5,9 @@ description: In this exercise, you'll create a simple conversation simulator fea
 
 # {$frontmatter.title}
 
-In this exercise, you'll create a simple conversation simulator featuring Bob, a character with distinct responses to different types of interactions. Your task is to develop a program that interacts with Bob according to specific rules, using JavaScript's `prompt()` and `alert()` functions for user input and output. The simulation ends when the user decides to say "Goodbye!" or "Bye!".
+In this exercise, you'll create a simple conversation simulator featuring Bob, a character with distinct responses to different types of interactions. Your task is to develop a program that interacts with Bob according to specific rules, using **JavaScript's** `prompt()` and `alert()` functions for user input and output. The simulation ends when the user decides to say "Goodbye!" or "Bye!".
 
-This exercise aims to showcase your ability to implement conditional logic in JavaScript. Dive into the world of interactive programming and explore how JavaScript can be used to simulate human-like conversations.
+This exercise aims to showcase your ability to implement conditional logic in **JavaScript**. Dive into the world of interactive programming and explore how **JavaScript** can be used to simulate human-like conversations.
 
 ## Instructions
 
@@ -25,6 +25,11 @@ Create a program that will carry on a conversation with Bob.
 - If the user doesn't say anything, Bob says "Fine. Be that way!"
 - For any other statement, Bob simply says "Whatever."
 
+## Tips
+
+- Use a loop to keep the conversation going.
+- Use the string methods to manipulate the user's input and check if it's a question, if it's in all caps or even to trim it.
+
 ## Solution
 
 <details>
@@ -34,10 +39,10 @@ Create a program that will carry on a conversation with Bob.
 let conversationIsOn = true;
 
 while (conversationIsOn) {
-	let userInput = prompt('How are you?');
+	let userInput = prompt('How are you?').trim();
 	let response;
 
-	if (userInput === '' || userInput === ' ') {
+	if (userInput === '') {
 		response = 'Fine. Be that way!';
 	} else if (userInput.toUpperCase() === userInput) {
 		response = 'Whoa, chill out!';

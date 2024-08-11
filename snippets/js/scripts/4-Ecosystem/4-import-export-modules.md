@@ -1,44 +1,5 @@
 # Import or Export Modules
 
-## Import
-
-### Import a single export from a module
-
-```js
-import {myFunction} from './my-module.js';
-```
-
-### Import multiple exports from a module
-
-```js
-import {myFunction, myVariable} from './my-module.js';
-```
-
-### Import all exports from a module
-
-```js
-
-import * as myModule from './my-module.js';
-```
-
-### Import a default export from a module
-
-```js
-import myFunction from './my-module.js';
-```
-
-### Import a default export and named exports from a module
-
-```js
-import myFunction, {myVariable} from './my-module.js';
-```
-
-### Import a library
-
-```js
-import React from 'react';
-```
-
 ## Export
 
 ### Export a single value
@@ -114,3 +75,41 @@ export default class {
 }
 ```
 
+## Import
+
+### Import a single export from a module
+
+```js
+import {myFunction} from './my-module.js';
+```
+
+### Import multiple exports from a module
+
+```js
+import {myFunction, myVariable} from './my-module.js';
+```
+
+### Import all exports from a module
+
+```js
+
+import * as myModule from './my-module.js';
+```
+
+### Import a default export from a module
+
+```js
+import myFunction from './my-module.js';
+```
+
+### Import a default export and named exports from a module
+
+```js
+import myFunction, {myVariable} from './my-module.js';
+```
+
+### Import a library
+
+```js
+import React from 'react';
+```

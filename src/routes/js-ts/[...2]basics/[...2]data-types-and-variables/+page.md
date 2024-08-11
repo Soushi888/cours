@@ -20,35 +20,43 @@ In **JavaScript**, variables can hold different types of data, which are categor
 1. **Number**: Represents numeric values. **JavaScript** uses double-precision floating-point format for numbers, which includes both integers and decimal numbers. There are no separate integer types in **JavaScript**.
 
 ``` javascript
-let num = 42; // Integer
-let decimalNum = 9.99; // Decimal number
+const num = 42; // Integer
+const decimalNum = 9.99; // Decimal number or float (floating point)
 ```
 
 2. **String**: Represents sequences of characters. Strings in **JavaScript** are immutable and can be created using single quotes (**'**), double quotes (**"**), or backticks (**`**).
 
 ``` javascript
-let str = 'Hello, world!';
-let anotherStr = "Another string";
-let templateStr = `Template literal`;
+const str = 'Hello, world!';
+const anotherStr = "Another string";
+const templateStr = `Template literal`;
+```
+
+**Template literals** are useful when you need to include variables in a string.
+
+``` javascript
+const name = 'John';
+const greeting = `Hello, ${name}!`; 
+console.log(greeting); // Output: "Hello, John!"
 ```
 
 3. **Boolean**: Represents truthy or falsy values, specifically `true` or `false`.
 
 ``` javascript
-let isTrue = true;
-let isFalse = false;
+const isTrue = true;
+const isFalse = false;
 ```
 
-4. **Array**: Represents ordered lists of data. Arrays can contain items of any type.
+4. **Array**: Represents ordered **lists of data**. Arrays can contain items of any type.
 
 ``` javascript
-let fruits = ['Apple', 'Banana', 'Cherry'];
+const fruits = ['Apple', 'Banana', 'Cherry'];
 ```
 
-5. **Object**: Represents collections of data and/or functionality. Objects can be created using curly braces `{}` and can contain properties and methods.
+5. **Object**: Represents **collections of data and/or functionality**. Objects can be created using curly braces `{}` and can contain properties and methods.
 
 ``` javascript
-let person = {
+const person = {
   firstName: 'John',
   lastName: 'Doe',
   fullName: function() {
@@ -60,13 +68,13 @@ let person = {
 6. **Null**: Represents the intentional absence of any object value. It is one of the falsy values in **JavaScript**.
 
 ``` javascript
-let nothing = null;
+const nothing = null;
 ```
 
 7. **Undefined**: Represents a variable that has been declared but has not yet been assigned a value. It is another falsy value in **JavaScript**.
 
 ``` javascript
-let something;
+const something;
 console.log(something); // undefined
 ```
 
@@ -74,7 +82,7 @@ These types form the basis of data handling in **JavaScript**, allowing develope
 
 ### Global variables
 
-Global variables in **JavaScript** are variables that are defined outside of any function or block, allowing them to be accessed and modified from any part of the code. Historically, these variables were declared using the `var` keyword. However, due to modern best practices emphasizing better scope management and encapsulation, the use of var for declaring global variables is considered deprecated. Despite this, understanding global variables remains relevant as they continue to exist within the language and can be seen in older programs.
+Global variables in **JavaScript** are variables that are defined outside of any function or block, allowing them to be accessed and modified from any part of the code. Historically, these variables were declared using the `var` keyword. However, due to modern best practices emphasizing better scope management and encapsulation, the use of var for declaring global variables is considered **deprecated**. Despite this, understanding global variables remains relevant as they continue to exist within the language and can be seen in older programs.
 
 ``` javascript
 var a = 1;
@@ -83,9 +91,9 @@ console.log(a); // Outputs: 1
 
 ### Immutable variables
 
-An immutable variable in **JavaScript** is a variable whose value cannot be changed once it has been assigned. Immutable variables are declared using the const keyword. When you declare a variable with const, you must initialize it with a value, and thereafter, any attempt to reassign a new value to this variable will result in a **JavaScript** error. This immutability helps prevent accidental modifications to the variable's value throughout the code, making the code easier to reason about and less prone to bugs.
+An immutable variable in **JavaScript** is a variable whose value cannot be changed once it has been assigned. Immutable variables are declared using the `const` keyword. When you declare a variable with `const`, you must initialize it with a value, and thereafter, any attempt to reassign a new value to this variable will result in a **JavaScript error**. This immutability helps prevent accidental modifications to the variable's value throughout the code, making the code easier to reason about and less prone to bugs.
 
-It's important to note that the immutability of a const variable applies only to the binding itself, not necessarily to the content of the variable. For primitive values like numbers, strings, and booleans, this effectively makes them immutable because changing the value requires reassignment. However, for objects and arrays, while you cannot assign a new object or array to the variable, the properties or elements of the original object or array can still be modified.
+It's important to note that the immutability of a `const` variable applies only to the binding itself, not necessarily to the content of the variable. For primitive values like **numbers**, **strings**, and **booleans**, this effectively makes them immutable because changing the value requires reassignment. However, for **objects** and **arrays**, while you cannot assign a new **object** or **array** to the variable, the properties or elements of the original **object** or **array** can still be modified.
 
 ``` javascript
 // Declaring an immutable primitive value
@@ -99,15 +107,23 @@ person = { name: 'Jane', age: 25 }; // Error: Assignment to constant variable.
 // Modifying the object's properties is allowed
 person.name = 'Jane';
 console.log(person); // Outputs: { name: 'Jane', age: 30 }
+
+// Declaring an immutable array
+const numbers = [1, 2, 3];
+numbers[0] = 4; // Error: Assignment to constant variable.
+
+// Modifying the array's elements is allowed
+numbers.push(4);
+console.log(numbers); // Outputs: [1, 2, 3, 4]
 ```
 
-In the example above, attempting to reassign a new value to either pi or person results in an error because they are declared with const. However, modifying the properties of the person object is permitted because the immutability constraint applies to the variable binding, not the internal structure of objects or arrays.
+In the example above, attempting to reassign a new value to either pi or person results in an error because they are declared with `const`. However, modifying the properties of the person object is permitted because the immutability constraint applies to the variable binding, not the internal structure of **objects** or **arrays**.
 
  ### Mutable variables
 
 In **JavaScript**, mutable variables are variables whose values can be changed after they have been initially assigned. Mutable variables allow for the modification of their content throughout the execution of the program. This contrasts with immutable variables, which, once assigned, retain the same value and cannot be altered.
 
-Mutable variables can be declared using `var`, `let`, or `const` keywords, but their mutability depends on the type of value they hold. For primitive values (like numbers, strings, and booleans), even though the variable itself cannot be reassigned (if declared with `const`), the value it holds can still be changed. For objects and arrays, whether declared with `var`, `let`, or `const`, their contents can be modified because objects and arrays are reference types in **JavaScript**.
+Mutable variables can be declared using `var`, `let`, or `const` keywords, but their mutability depends on the type of value they hold. For primitive values (like **numbers**, **strings**, and **booleans**), even though the variable itself cannot be reassigned (if declared with `const`), the value it holds can still be changed. For **objects** and **arrays**, whether declared with `var`, `let`, or `const`, their contents can be modified because **objects** and **arrays** are reference types in **JavaScript**.
 
 Here's an example to illustrate mutable variables:
 
@@ -128,7 +144,7 @@ fruits.push('banana'); // Allowed, adds an element to the array
 In the example above:
 
 The `count` variable is mutable because its value is changed from `0` to `5`.
-The person object is mutable; even though it's declared with `const`, its `name` property can be changed.
-The `fruits` array is mutable; even though it's also declared with `const`, elements can be added to it.
+The person **object** is mutable; even though it's declared with `const`, its `name` property can be changed.
+The `fruits` **array** is mutable; even though it's also declared with `const`, elements can be added to it.
 
 This flexibility to modify the contents of variables is a fundamental aspect of **JavaScript**, allowing for dynamic and interactive programming.
