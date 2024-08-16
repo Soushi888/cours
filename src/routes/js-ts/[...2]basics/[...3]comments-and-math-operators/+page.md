@@ -200,3 +200,36 @@ This example illustrates how parentheses can significantly alter the outcome of 
 - Remember that excessive use of parentheses can sometimes obscure the intent of the code, so strive for a balance between clarity and conciseness.
 
 By mastering the art of combining math operators and understanding the power of parentheses, you'll be well-equipped to tackle complex calculations in your JavaScript projects with confidence.
+
+## The Math Object
+
+The Math object in JavaScript is a built-in object that offers properties and methods for performing mathematical operations and calculations. It provides access to mathematical constants like PI and E, as well as functions for trigonometry, logarithms, rounding numbers, and more. Unlike other objects in JavaScript, the Math object does not need to be instantiated; its properties and methods are accessed directly through the object itself.
+
+Here are some key aspects of the Math object:
+
+- **Properties**: The Math object contains several properties representing mathematical constants. Notable ones include:
+  - `Math.PI`: Represents the ratio of the circumference of a circle to its diameter (approximately 3.14159).
+  - `Math.E`: Represents Euler's number, the base of natural logarithms (approximately 2.71828).
+
+- **Methods**: The Math object also provides a variety of methods for mathematical operations, including:
+  - `Math.abs()`: Returns the absolute value of a number.
+  - `Math.round()`: Rounds a number to the nearest integer.
+  - `Math.sqrt()`: Calculates the square root of a number.
+  - `Math.pow()`: Raises a number to an exponent. Equivalent to the `**` operator.
+  - `Math.floor()`, `Math.ceil()`, `Math.trunc()`: Functions for rounding numbers in different ways.
+  - Trigonometric functions like `Math.sin()`, `Math.cos()`, `Math.tan()` and their inverses.
+  - Logarithmic functions like `Math.log()`, `Math.log10()`, `Math.log2()`.
+
+Since the Math object is static, meaning it cannot be instantiated, you use it directly in your code. For example, to calculate the square root of 9, you would write:
+
+```javascript
+let result = Math.sqrt(9); // result will be 3
+```
+
+And to get the value of PI, you simply reference the property:
+
+```javascript
+let piValue = Math.PI; // piValue will be approximately 3.141592653589793
+```
+
+The Math object is a fundamental part of JavaScript, providing a wide range of mathematical functionalities that are essential for many types of programming tasks, especially those involving numerical computations and scientific calculations.
