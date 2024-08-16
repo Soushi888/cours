@@ -1,6 +1,6 @@
 ---
 title: Get Started
-description: Explore the fundamentals of JavaScript and enhance your web development skills with this introductory guide. Perfect for beginners and experienced developers alike, learn how to execute JavaScript directly in your browser, manipulate HTML documents, and leverage external JavaScript files for efficient coding. Discover the power of JavaScript through hands-on examples and best practices, paving the way for dynamic web interactions. Start your JavaScript journey today and elevate your web development capabilities.
+description: Explore the fundamentals of JavaScript and enhance your web development skills with this introductory guide. Perfect for beginners and experienced developers alike, learn how to execute JavaScript directly in your browser, manipulate **HTML** documents, and leverage external JavaScript files for efficient coding. Discover the power of JavaScript through hands-on examples and best practices, paving the way for dynamic web interactions. Start your JavaScript journey today and elevate your web development capabilities.
 ---
 
 # {$frontmatter.title}
@@ -23,22 +23,22 @@ console.log("Hello, world!");
 
 This will print "Hello, world!" to the console.
 
-Let's now focusing on running **JavaScript** from a HTML file and from a **JavaScript** file. This will give you a comprehensive understanding of how to work with **JavaScript** in various environments.
+Let's now focusing on running **JavaScript** from a **HTML** file and from a **JavaScript** file. This will give you a comprehensive understanding of how to work with **JavaScript** in various environments.
 
 ## From a HTML File
 
-Running **JavaScript** directly from a HTML file is straightforward. You can either place your script tags in the head section or just before the closing body tag (`</body>`). Here's how you can do it:
+Running **JavaScript** directly from a **HTML** file is straightforward. You can either place your script tags in the head section or just before the closing body tag (`</body>`). Here's how you can do it:
 
 ### Inline Scripting
 
-Inline scripting involves placing your **JavaScript** code directly within `<script>` tags in your HTML document. This method is less common due to separation of concerns principles, but it's still useful for small scripts or quick tests.
+Inline scripting involves placing your **JavaScript** code directly within `<script>` tags in your **HTML** document. This method is less common due to separation of concerns principles, but it's still useful for small scripts or quick tests.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript in HTML</title>
+    <title>JavaScript in **HTML**</title>
 </head>
 <body>
 
@@ -54,9 +54,9 @@ Inline scripting involves placing your **JavaScript** code directly within `<scr
 
 ### External JavaScript Files
 
-For larger projects or to keep your HTML clean, it's better to use external **JavaScript** files. You link these files using the `<script src="your-script.js"></script>` syntax, typically at the end of the body tag.
+For larger projects or to keep your **HTML** clean, it's better to use external **JavaScript** files. You link these files using the `<script src="your-script.js"></script>` syntax, typically at the end of the body tag.
 
-**HTML File:**
+****HTML** File:**
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -78,4 +78,32 @@ For larger projects or to keep your HTML clean, it's better to use external **Ja
 console.log("Hello, JavaScript!");
 ```
 
-This approach separates your **JavaScript** logic from your HTML structure, making both easier to manage and maintain.
+## Best Practices for Including JavaScript
+
+When incorporating JavaScript into your web pages, it's important to consider how it affects the loading performance of your site. Placing JavaScript incorrectly can lead to slower page loads and a worse user experience. Here are some recommendations to ensure your JavaScript is included optimally:
+
+### Place Scripts at the Bottom of the Body Tag
+
+Whenever possible, place your `<script>` tags just before the closing `</body>` tag. This ensures that the HTML content loads first, which can significantly improve page load times since the browser doesn't have to wait for the JavaScript to be downloaded and executed before rendering the page.
+
+```html
+<body>
+    <!-- Your HTML content here -->
+
+    <script src="your-script.js"></script>
+</body>
+```
+
+### Use the `defer` Attribute
+
+If you must include your `<script>` tag in the `<head>` of your document, consider using the `defer` attribute. This tells the browser to continue parsing the HTML while downloading the script, and then execute the script after the document has been fully parsed. This prevents the script from blocking the rendering of the page.
+
+```html
+<head>
+    <script defer src="your-script.js"></script>
+</head>
+```
+
+The `defer` attribute is particularly useful for external scripts that don't need to run immediately and can safely be loaded asynchronously.
+
+By following these best practices, you can ensure that your JavaScript is included in a way that enhances the performance and usability of your web pages.
