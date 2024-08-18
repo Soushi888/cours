@@ -16,6 +16,7 @@ Before diving into the world of JavaScript, it's crucial to set up a comfortable
 To view and interact with JavaScript code effectively, having a reliable web browser is essential. Here are three popular options:
 
 - [Google Chrome](https://www.google.com/chrome/) - Known for its speed and extensive library of extensions.
+- [Chromium](https://www.chromium.org/) - Community-driven, freely-licensed binary distribution of Google Chrome.
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) - Renowned for its privacy features and customization options.
 - [Brave Browser](https://brave.com/) - Offers enhanced privacy and ad-blocking capabilities.
 - [Vivaldi](https://vivaldi.com/) - Offers a smooth, private and customizable user experience.
@@ -63,8 +64,8 @@ Engage with JavaScript through interactive platforms that offer certifications a
 Strengthen your JavaScript skills with practical exercises and assessments:
 
 - [Exercism - JavaScript Track](https://exercism.org/tracks/javascript) - Offers coding exercises with mentor feedback.
-- [W3Schools - JavaScript Exercises](https://www.w3schools.com/js/js_exercises.asp) - Features a variety of exercises to test your knowledge.
-- [W3Schools - JavaScript Quiz](https://www.w3schools.com/js/js_quiz.asp) - Quiz of 25 questions to assess your understanding of JavaScript concepts.
+- [JavaScript Exercises](https://www.w3schools.com/js/js_exercises.asp) - Features a variety of exercises to test your knowledge.
+- [JavaScript Quiz](https://www.w3schools.com/js/js_quiz.asp) - Quiz of 25 questions to assess your understanding of JavaScript concepts.
 - [w3resourse - JavaScript Exercises](https://www.w3resource.com/javascript-exercises/) - Offers a variety of exercises to test your knowledge.
 
 ## Search Engine and AI chatbot
