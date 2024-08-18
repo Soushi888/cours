@@ -148,3 +148,31 @@ The person **object** is mutable; even though it's declared with `const`, its `n
 The `fruits` **array** is mutable; even though it's also declared with `const`, elements can be added to it.
 
 This flexibility to modify the contents of variables is a fundamental aspect of **JavaScript**, allowing for dynamic and interactive programming.
+
+## Additional resources
+
+- MDN
+  - [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+  - [Storing the information you need — Variables](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables)
+
+- JavaScript Infos
+  - [Structure](https://javascript.info/structure)
+  - [Variables](https://javascript.info/variables)
+  - [Data types](https://javascript.info/types)
+  - [Data types list](https://javascript.info/data-types)
+
+- W3Schools
+  - [Variables](https://www.w3schools.com/js/js_variables.asp)
+  - [Let](https://www.w3schools.com/js/js_let.asp)
+  - [Const](https://www.w3schools.com/js/js_const.asp)
+  - [Data types](https://www.w3schools.com/js/js_datatypes.asp)
+
+- Tutorialspoint
+  - [Variables](https://www.tutorialspoint.com/javascript/javascript_variables.htm)
+  - [let Statement](https://www.tutorialspoint.com/javascript/javascript_let_statement.htm)
+  - [Constants](https://www.tutorialspoint.com/javascript/javascript_constants.htm)
+  - [Data types](https://www.tutorialspoint.com/javascript/javascript_data_types.htm)
+
+- GeeksforGeeks
+  - [JavaScript Variables](https://www.geeksforgeeks.org/javascript-variables/)
+  - [Variables and Datatypes in JavaScript](https://www.geeksforgeeks.org/variables-datatypes-javascript/)

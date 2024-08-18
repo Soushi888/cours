@@ -11,3 +11,22 @@ title: What is JavaScript ?
 One of the key features of **JavaScript** is its event-driven nature, which means it can respond to user actions such as clicks, mouse movements, and keyboard presses. This capability, combined with its ability to manipulate **HTML** and **CSS** through the Document Object Model (DOM), allows for highly interactive web pages.
 
 **JavaScript**'s widespread adoption and support across all major web browsers make it essential for web developers. Its evolution continues with ongoing improvements and additions to the language, ensuring its relevance and utility in modern web development.
+
+## Additional Resources
+
+- MDN
+    - [What is JavaScript?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+
+- JavaScript Infos
+    - [An Introduction to JavaScript](https://javascript.info/intro)
+
+- W3Schools
+    - [Javascript Introduction](https://www.w3schools.com/js/js_intro.asp)
+
+- Tutorialspoint
+    - [JavaScript Tutorial Homepage](https://www.tutorialspoint.com/javascript/index.htm)
+    - [JavaScript Overview](https://www.tutorialspoint.com/javascript/javascript_overview.htm)
+    - [JavaScript Features](https://www.tutorialspoint.com/javascript/javascript_features.htm)
+
+- Geeksforgeeks
+    - [Introduction to JavaScript](https://www.geeksforgeeks.org/introduction-to-javascript/)

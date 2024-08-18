@@ -64,9 +64,9 @@ Engage with JavaScript through interactive platforms that offer certifications a
 Strengthen your JavaScript skills with practical exercises and assessments:
 
 - [Exercism - JavaScript Track](https://exercism.org/tracks/javascript) - Offers coding exercises with mentor feedback.
-- [JavaScript Exercises](https://www.w3schools.com/js/js_exercises.asp) - Features a variety of exercises to test your knowledge.
-- [JavaScript Quiz](https://www.w3schools.com/js/js_quiz.asp) - Quiz of 25 questions to assess your understanding of JavaScript concepts.
-- [w3resourse - JavaScript Exercises](https://www.w3resource.com/javascript-exercises/) - Offers a variety of exercises to test your knowledge.
+- [W3schools - JavaScript Exercises](https://www.w3schools.com/js/js_exercises.asp) - Features a variety of exercises to test your knowledge.
+- [W3schools - JavaScript Quiz](https://www.w3schools.com/js/js_quiz.asp) - Quiz of 25 questions to assess your understanding of JavaScript concepts.
+- [W3resourse - JavaScript Exercises](https://www.w3resource.com/javascript-exercises/) - Offers a variety of exercises to test your knowledge.
 
 ## Search Engine and AI chatbot
 

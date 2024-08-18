@@ -1,6 +1,6 @@
 ---
-title: Comments and Math Operators
-description: Page description.
+title: Comments and basics Math operations
+description: Dive into the fundamentals of JavaScript with this comprehensive guide covering comments, basic math operations, the Number object, and the Math object. Learn how to use comments effectively in your code, master essential math operators and their usage, explore the capabilities of the Number object for advanced number manipulation, and discover the utility of the Math object for complex mathematical computations. Whether you're a beginner looking to solidify your understanding or an experienced developer seeking a refresher, this guide offers valuable insights and examples to enhance your JavaScript skills.
 ---
 
 # {$frontmatter.title}
@@ -201,35 +201,126 @@ This example illustrates how parentheses can significantly alter the outcome of 
 
 By mastering the art of combining math operators and understanding the power of parentheses, you'll be well-equipped to tackle complex calculations in your JavaScript projects with confidence.
 
+## The Number Object
+
+The `Number` object in JavaScript is a wrapper object allowing you to work with numerical values. It provides properties and methods for formatting numbers as well as performing operations on them. Unlike primitive number values, `Number` objects can have methods.
+
+Here are some key aspects of the `Number` object:
+
+### Creating Number Objects
+
+You can create a `Number` object using the `new` keyword followed by the `Number()` constructor. However, it's important to note that using the `Number` object is not always necessary because JavaScript automatically converts between string representations of numbers and numeric values when needed.
+
+Example:
+```javascript
+let num = new Number(123); // Creates a Number object
+let numPrimitive = 123; // A primitive number value
+```
+
+### Properties
+
+The `Number` object has several properties that represent special numeric values, including:
+
+- `Number.MAX_VALUE`: The largest positive number that can be represented.
+- `Number.MIN_VALUE`: The smallest positive number that can be represented.
+- `Number.NaN`: Represents "Not-a-Number" value.
+- `Number.POSITIVE_INFINITY`: Positive infinity.
+- `Number.NEGATIVE_INFINITY`: Negative infinity.
+- `Number.EPSILON`: The difference between 1 and the smallest value greater than 1 that JavaScript can represent.
+
+### Methods
+
+The `Number` object also provides several methods for formatting and manipulating numbers, such as:
+
+- `Number.isInteger()`: Determines whether the passed value is an integer.
+- `Number.isNaN()`: Determines whether the passed value is NaN.
+- `Number.isFinite()`: Determines whether the passed value is a finite number.
+- `Number.isSafeInteger()`: Determines whether the passed value is a safe integer (i.e., an integer that can be exactly represented as a double).
+- `Number.prototype.toFixed()`: Formats a number using fixed-point notation.
+- `Number.prototype.toString()`: Returns a string representing the specified Number object.
+- `Number.prototype.valueOf()`: Returns the primitive value of a Number object.
+
+ In JavaScript, even though you primarily interact with primitive number values rather than `Number` objects, you can still access the properties and methods defined on `Number.prototype` directly from a primitive number value. This is possible because JavaScript automatically wraps the primitive number in a temporary `Number` object when you attempt to call a method on it, allowing you to use the methods defined on `Number.prototype`.
+
+Example usage of methods:
+```javascript
+let num = 123.456;
+console.log(num.toFixed(2)); // Outputs: "123.46"
+console.log(Number.isInteger(num)); // Outputs: false
+```
+
+While the `Number` object provides useful properties and methods for working with numbers, it's often more common to work with primitive numeric values in JavaScript due to their simplicity and performance benefits. However, understanding the `Number` object can be beneficial for specific use cases, such as when you need to leverage its methods for formatting or validating numbers.
+
 ## The Math Object
 
-The Math object in JavaScript is a built-in object that offers properties and methods for performing mathematical operations and calculations. It provides access to mathematical constants like PI and E, as well as functions for trigonometry, logarithms, rounding numbers, and more. Unlike other objects in JavaScript, the Math object does not need to be instantiated; its properties and methods are accessed directly through the object itself.
+The `Math` object in JavaScript is a built-in object that provides mathematical constants and functions. Unlike many other objects in JavaScript, `Math` is not a constructor and does not create objects. Instead, it serves as a namespace for mathematical functions and constants, meaning all of its properties and methods are static and can be accessed directly through the `Math` object itself without creating an instance of `Math`.
 
-Here are some key aspects of the Math object:
+### Properties
 
-- **Properties**: The Math object contains several properties representing mathematical constants. Notable ones include:
-  - `Math.PI`: Represents the ratio of the circumference of a circle to its diameter (approximately 3.14159).
-  - `Math.E`: Represents Euler's number, the base of natural logarithms (approximately 2.71828).
+The `Math` object contains several properties that represent mathematical constants, such as:
 
-- **Methods**: The Math object also provides a variety of methods for mathematical operations, including:
-  - `Math.abs()`: Returns the absolute value of a number.
-  - `Math.round()`: Rounds a number to the nearest integer.
-  - `Math.sqrt()`: Calculates the square root of a number.
-  - `Math.pow()`: Raises a number to an exponent. Equivalent to the `**` operator.
-  - `Math.floor()`, `Math.ceil()`, `Math.trunc()`: Functions for rounding numbers in different ways.
-  - Trigonometric functions like `Math.sin()`, `Math.cos()`, `Math.tan()` and their inverses.
-  - Logarithmic functions like `Math.log()`, `Math.log10()`, `Math.log2()`.
+- `Math.PI`: The ratio of the circumference of a circle to its diameter, approximately 3.14159.
+- `Math.E`: The base of natural logarithms, approximately 2.71828.
+- `Math.LN2`, `Math.LN10`, `Math.LOG2E`, `Math.LOG10E`: Various logarithmic constants.
+- `Math.SQRT2`, `Math.SQRT1_2`: Square root of 2 and square root of 1/2, respectively.
 
-Since the Math object is static, meaning it cannot be instantiated, you use it directly in your code. For example, to calculate the square root of 9, you would write:
+### Methods
+
+The `Math` object provides a wide range of mathematical functions, including:
+
+- **Arithmetic Operations**: Functions like `Math.abs()` for absolute value, `Math.ceil()` for rounding up, `Math.floor()` for rounding down, `Math.round()` for rounding to the nearest integer, and `Math.trunc()` for removing fractional digits.
+  
+- **Exponential and Logarithmic Functions**: Includes `Math.exp()` for exponentiation, `Math.log()` for natural logarithm, `Math.pow()` for raising to a power, `Math.sqrt()` for square root, and various others for hyperbolic functions.
+
+- **Trigonometric Functions**: Functions like `Math.sin()`, `Math.cos()`, `Math.tan()`, `Math.asin()`, `Math.acos()`, `Math.atan()`, and their hyperbolic counterparts.
+
+- **Other Utility Functions**: Such as `Math.max()` and `Math.min()` for finding the maximum and minimum of zero or more numbers, `Math.random()` for generating a random number between 0 and 1, and `Math.sign()` for determining the sign of a number.
+
+Example usage of `Math` properties and methods:
 
 ```javascript
-let result = Math.sqrt(9); // result will be 3
+console.log(Math.PI); // Outputs: 3.141592653589793
+
+let roundedUp = Math.ceil(4.2); // 5
+console.log(roundedUp);
+
+let randomNum = Math.random(); // Random number between 0 and 1
+console.log(randomNum);
+
+let maxVal = Math.max(1, 3, 7, 9); // 9
+console.log(maxVal);
 ```
 
-And to get the value of PI, you simply reference the property:
+The `Math` object is a versatile tool in JavaScript for performing a wide range of mathematical operations and calculations, making it an essential part of many applications that require numerical processing.
 
-```javascript
-let piValue = Math.PI; // piValue will be approximately 3.141592653589793
-```
+## Additional Resources
 
-The Math object is a fundamental part of JavaScript, providing a wide range of mathematical functionalities that are essential for many types of programming tasks, especially those involving numerical computations and scientific calculations.
+- MDN
+  - [Basic math in JavaScript — numbers and operators](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)
+  - [Number object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+  - [Math object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+
+- JavaScript Infos
+  - [Basic operatos, math](https://javascript.info/operators)
+  - [Number](https://javascript.info/number)
+  - [Comments](https://javascript.info/comments)
+
+- W3Schools
+  - [Comments](https://www.w3schools.com/js/js_comments.asp)
+  - [Operators](https://www.w3schools.com/js/js_operators.asp)
+  - [Arithmetic](https://www.w3schools.com/js/js_arithmetic.asp)
+  - [Numbers](https://www.w3schools.com/js/js_numbers.asp)
+  - [Math](https://www.w3schools.com/js/js_math.asp)
+
+- Tutorialspoint
+  - [Comments](https://www.tutorialspoint.com/javascript/javascript_comments.htm)
+  - [Operators](https://www.tutorialspoint.com/javascript/javascript_operators.htm)
+  - [Arithmetic Operators](https://www.tutorialspoint.com/javascript/javascript_arithmetic_operators.htm)
+  - [Number Object](https://www.tutorialspoint.com/javascript/javascript_number_object.htm)
+  - [Math Object](https://www.tutorialspoint.com/javascript/javascript_math_object.htm)
+
+- GeeksforGeeks
+  - [Comments](https://www.geeksforgeeks.org/javascript-comments/)
+  - [Arithmetic Operators](https://www.geeksforgeeks.org/javascript-arithmetic-operators/)
+  - [Numbers](https://www.geeksforgeeks.org/javascript-numbers/)
+  - [Math Object](https://www.geeksforgeeks.org/javascript-math-object/)

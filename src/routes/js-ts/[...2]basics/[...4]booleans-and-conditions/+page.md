@@ -396,9 +396,10 @@ Key points about `switch` statements in JavaScript:
 
 ## Example: Interaction with Users
 
-**JavaScript** can interact with users through prompts (`prompt`) and alerts (`alert`). These methods allow you to ask for user input or display messages directly in the browser window.
+**JavaScript** can interact with users through prompts (`prompt`), confirmations (`confirm`) and alerts (`alert`). These methods allow you to ask for user input or display messages directly in the browser window.
 
 - `prompt()`: This method allows you to prompt the user for input. It returns the input as a string. If the user cancels the prompt, it returns an empty string.
+- `confirm()`: This method displays a confirmation dialog box in the browser window. It returns `true` if the user clicks the "**OK**" button, and `false` if the user clicks the "**Cancel**" button.
 - `alert()`: This method displays an alert message in the browser window.
 
 ```javascript
@@ -411,4 +412,44 @@ Key points about `switch` statements in JavaScript:
     } else {
         alert("I don't understand, I'm just a simple bot.");
     }
+
+    if (confirm('Do you want to play a game ?')) {
+        alert('Let\'s play! :D');
+    } else {
+        alert('Ok, see you next time !');
+    }
 ```
+
+## Additional Resources
+
+- MDN
+    - [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+    - [Making decisions in your code — conditionals](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+
+- JavaScript Infos
+    - [Comparisons](https://javascript.info/comparison)
+    - [Conditional brnaching: if, '?'](https://javascript.info/ifelse)
+    - [The "switch" statement](https://javascript.info/switch)
+    - [Logical operators](https://javascript.info/logical-operators)
+    - [Nullish coalescing operator](https://javascript.info/nullish-coalescing-operator)
+
+- W3Schools
+    - [Booleans](https://www.w3schools.com/js/js_booleans.asp)
+    - [Comparisons and logical operators](https://www.w3schools.com/js/js_comparisons.asp)
+    - [If, else, and else if](https://www.w3schools.com/js/js_if_else.asp)
+    - [Switch statement](https://www.w3schools.com/js/js_switch.asp)
+
+- Tutorialspoint
+    - [Comparison Operators](https://www.tutorialspoint.com/javascript/javascript_comparison_operators.htm)
+    - [Logical Operators](https://www.tutorialspoint.com/javascript/javascript_logical_operators.htm)
+    - [Conditional Operators](https://www.tutorialspoint.com/javascript/javascript_conditional_operators.htm)
+    - [if...else Statement](https://www.tutorialspoint.com/javascript/javascript_ifelse.htm)
+    - [Switch Case](https://www.tutorialspoint.com/javascript/javascript_switch_case.htm)
+    - [The Boolean Object](https://www.tutorialspoint.com/javascript/javascript_boolean_object.htm)
+    - [Nullish Coalescing Operator](https://www.tutorialspoint.com/javascript/javascript_nullish_coalescing_operator.htm)
+
+- Geeksforgeeks
+    - [Comparison Operators](https://www.geeksforgeeks.org/javascript-comparison-operators/)
+    - [Logical Operators](https://www.geeksforgeeks.org/javascript-logical-operators/)
+    - [if-else](https://www.geeksforgeeks.org/javascript-if-else/)
+    - [Switch Statement](https://www.geeksforgeeks.org/switch-case-in-javascript/)
