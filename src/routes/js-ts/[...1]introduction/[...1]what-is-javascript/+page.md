@@ -19,7 +19,8 @@ One of the key features of **JavaScript** is its event-driven nature, which mean
 
 - JavaScript Infos
     - [An Introduction to JavaScript](https://javascript.info/intro)
-
+    - [JavaScript Documentation](https://javascript.info/)
+    
 - W3Schools
     - [Javascript Introduction](https://www.w3schools.com/js/js_intro.asp)
 
