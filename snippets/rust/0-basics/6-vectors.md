@@ -6,12 +6,12 @@ A vector is a collection of values of the same type. Vectors have a variable len
 
 ### Declaring a vector
 
-To declare a vector, we can use the `vec!` macro or the `Vec::new` function.
+To declare a vector, we can use the `Vec::new` function or the `vec!` macro.
 
 ``` rust
-let my_vector = vec![1, 2, 3];
-let my_vector = Vec::new(); // equivalent to vec![]
+let my_vector = Vec::new();
 let my_vector: Vec<i32> = Vec::new([1, 2, 3]); // explicit type annotation
+let my_vector = vec![1, 2, 3]; // vec! macro is equivalent to the `Vec::new` function
 ```
 
 ### Accessing a vector
